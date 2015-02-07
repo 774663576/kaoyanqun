@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/major_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/record_bg"
+            android:gravity="center"
+            android:padding="10dip"
+            android:singleLine="true"
+            android:textColor="#444444"
+            android:textSize="16sp" />
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/major_name"
+            android:background="@drawable/record_bg"
+            android:listSelector="#00000000" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/listView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/major_name"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@+id/listView1"
+            android:background="@drawable/record_bg"
+            android:listSelector="#00000000" >
+        </ListView>
+
+        <com.edu.kygroup.widget.ScrollViewGridView
+            android:id="@+id/gridView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listView2"
+            android:layout_marginTop="8dip"
+            android:cacheColorHint="#00000000"
+            android:listSelector="#00000000"
+            android:numColumns="3"
+            android:verticalSpacing="5dip" />
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/gridView1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/search_post_graduate"
+            android:textColor="@color/sea_blue"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/txt"
+            android:layout_marginTop="3dp"
+            android:background="@color/sea_blue" />
+
+        <HorizontalScrollView
+            android:id="@+id/post_graduate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="10dip"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/scroll_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/none_mates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:singleLine="true"
+                    android:text="@string/none_mates"
+                    android:textColor="#666666"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+</ScrollView>

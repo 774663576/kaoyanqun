@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_title" >
+
+        <ImageView
+            android:id="@+id/user_pic"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:paddingBottom="3dp"
+            android:src="@drawable/pic_boy" />
+
+        <TextView
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/editor_selector" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/edit"
+            android:layout_toRightOf="@+id/user_pic" >
+
+            <TextView
+                android:id="@+id/nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:drawableRight="@drawable/p_male"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="张柏芝"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        android:layout_marginTop="5dp"
+        android:scrollbars="@null" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/personal_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/personal_info"
+                android:textColor="@color/green_title"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/personal_blue_line"
+                style="@style/setting_blue_line"
+                android:layout_below="@id/personal_info" />
+
+            <RelativeLayout
+                android:id="@+id/nick_name_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/personal_blue_line"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/nick_name"
+                    style="@style/setting_item_tv"
+                    android:text="@string/nick_name" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/nick_name_gray_line"
+                style="@style/setting_gray_line"
+                android:layout_below="@id/nick_name_rl" />
+
+            <RelativeLayout
+                android:id="@+id/home_modify_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nick_name_gray_line"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/home_modify"
+                    style="@style/setting_item_tv"
+                    android:drawableLeft="@drawable/home"
+                    android:text="@string/home_modify" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/home_modify_gray_line"
+                style="@style/setting_gray_line"
+                android:layout_below="@id/home_modify_rl" />
+
+            <RelativeLayout
+                android:id="@+id/school_modify_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_modify_gray_line"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/school_modify"
+                    style="@style/setting_item_tv"
+                    android:drawableLeft="@drawable/school"
+                    android:text="@string/school_modify"
+                    android:textColor="#cbcbcb" />
+
+                <Button
+                    android:id="@+id/right_arrow"
+                    style="@style/setting_right_arrow_btn" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/home_modify_gray_line_post"
+                style="@style/setting_gray_line"
+                android:layout_below="@+id/school_modify_rl" />
+
+            <RelativeLayout
+                android:id="@+id/post_modify_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_modify_gray_line_post"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/post_modify"
+                    style="@style/setting_item_tv"
+                    android:drawableLeft="@drawable/post_graduate"
+                    android:text="@string/auth_post1" />
+
+                <Button style="@style/setting_right_arrow_btn" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/my_post_view"
+                style="@style/setting_gray_line"
+                android:layout_below="@+id/post_modify_rl" />
+
+            <RelativeLayout
+                android:id="@+id/my_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/my_post_view"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/post_modify"
+                    style="@style/setting_item_tv"
+                    android:drawableLeft="@drawable/my_theme"
+                    android:text="@string/my_posts" />
+
+                <Button style="@style/setting_right_arrow_btn" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/announcement_view"
+                style="@style/setting_gray_line"
+                android:layout_below="@+id/my_post" />
+
+            <RelativeLayout
+                android:id="@+id/annoucement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/announcement_view"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/post_modify"
+                    style="@style/setting_item_tv"
+                    android:drawableLeft="@drawable/announcement"
+                    android:text="@string/announcement" />
+
+                <Button style="@style/setting_right_arrow_btn" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/account_manage"
+                style="@style/setting_category_tv"
+                android:layout_below="@+id/annoucement"
+                android:text="@string/account_manage" />
+
+            <TextView
+                android:id="@+id/account_blue_line"
+                style="@style/setting_blue_line"
+                android:layout_below="@id/account_manage" />
+
+            <RelativeLayout
+                android:id="@+id/modify_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/account_blue_line"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/my_aim"
+                    style="@style/setting_item_tv"
+                    android:drawableLeft="@drawable/mima"
+                    android:text="@string/password_modify" />
+
+                <Button style="@style/setting_right_arrow_btn" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/home_modify_gray_line1"
+                style="@style/setting_gray_line"
+                android:layout_below="@+id/modify_rl" />
+
+            <RelativeLayout
+                android:id="@+id/blacklist_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_modify_gray_line1"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/blacklist"
+                    style="@style/setting_item_tv"
+                    android:drawableLeft="@drawable/black_list"
+                    android:text="@string/blacklist" />
+
+                <Button style="@style/setting_right_arrow_btn" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/share_modify_gray_line"
+                style="@style/setting_gray_line"
+                android:layout_below="@+id/blacklist_rl" />
+
+            <RelativeLayout
+                android:id="@+id/share_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/share_modify_gray_line"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/share"
+                    style="@style/setting_item_tv"
+                    android:drawableLeft="@drawable/share"
+                    android:text="分享" />
+
+                <Button style="@style/setting_right_arrow_btn" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/setting_str"
+                style="@style/setting_category_tv"
+                android:layout_below="@+id/share_rl"
+                android:layout_marginTop="15dp"
+                android:text="@string/setting" />
+
+            <TextView
+                android:id="@+id/setting_blue_line"
+                style="@style/setting_blue_line"
+                android:layout_below="@id/setting_str" />
+
+            <RelativeLayout
+                android:id="@+id/check_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/setting_blue_line"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/share_friends"
+                    style="@style/setting_item_tv"
+                    android:drawableLeft="@drawable/check_update"
+                    android:text="@string/check_update" />
+
+                <Button style="@style/setting_right_arrow_btn" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/check_update_gray_line"
+                style="@style/setting_gray_line"
+                android:layout_below="@id/check_update" />
+
+            <RelativeLayout
+                android:id="@+id/share_friends_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/check_update_gray_line"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/share_friends"
+                    style="@style/setting_item_tv"
+                    android:drawableLeft="@drawable/share"
+                    android:text="@string/share_friends" />
+
+                <Button style="@style/setting_right_arrow_btn" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/share_friends_gray_line"
+                style="@style/setting_gray_line"
+                android:layout_below="@id/share_friends_rl"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/info_response_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/share_friends_gray_line"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/info_response"
+                    style="@style/setting_item_tv"
+                    android:drawableLeft="@drawable/yijian"
+                    android:text="@string/info_response" />
+
+                <Button style="@style/setting_right_arrow_btn" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/info_response_gray_line"
+                style="@style/setting_gray_line"
+                android:layout_below="@id/info_response_rl" />
+
+            <RelativeLayout
+                android:id="@+id/help_app_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/info_response_gray_line"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/help_app"
+                    style="@style/setting_item_tv"
+                    android:drawableLeft="@drawable/bangzu"
+                    android:text="@string/help_app" />
+
+                <Button style="@style/setting_right_arrow_btn" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/help_app_gray_line"
+                style="@style/setting_gray_line"
+                android:layout_below="@id/help_app_rl" />
+
+            <RelativeLayout
+                android:id="@+id/quit_app_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/help_app_gray_line"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/quit_app"
+                    style="@style/setting_item_tv"
+                    android:drawableLeft="@drawable/tuichu"
+                    android:text="@string/quit_app" />
+
+                <Button style="@style/setting_right_arrow_btn" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

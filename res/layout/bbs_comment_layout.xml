@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input_layout" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip" >
+
+                <!-- com.edu.kygroup.widget.RoundAngleImageView -->
+
+                <com.edu.kygroup.widget.RoundAngleImageView
+                    android:id="@+id/image"
+                    android:layout_width="35dip"
+                    android:layout_height="35dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pic_boy" />
+
+                <RelativeLayout
+                    android:id="@+id/content_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dip"
+                    android:layout_toRightOf="@+id/image"
+                    android:background="@drawable/bbs_item_left_bg" >
+
+                    <TextView
+                        android:id="@+id/nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="5dp"
+                        android:text="舒淇"
+                        android:textColor="#485355"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="2014"
+                        android:textColor="@color/gray"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nickname"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="10dp"
+                        android:text="无病呻吟"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/content"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="60dip"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="500dip"
+                        android:maxWidth="500dip"
+                        android:visibility="gone" />
+
+                    <com.edu.kygroup.widget.ScrollViewGridView
+                        android:id="@+id/imgGridview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img"
+                        android:listSelector="#00000000"
+                        android:scrollbars="none"
+                        android:visibility="visible" >
+                    </com.edu.kygroup.widget.ScrollViewGridView>
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dip"
+                        android:layout_below="@+id/imgGridview"
+                        android:layout_marginTop="8dip"
+                        android:background="@color/bbs_layout" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line"
+                        android:background="#f7f7f7"
+                        android:visibility="gone" >
+
+                        <com.edu.kygroup.widget.DrawableCenterTextView
+                            android:id="@+id/btn_share"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/icon_share"
+                            android:drawablePadding="3dip"
+                            android:padding="5dip"
+                            android:text="分享"
+                            android:textColor="@color/gray" />
+
+                        <View
+                            android:layout_width="0.5dip"
+                            android:layout_height="match_parent"
+                            android:background="@color/bbs_layout" />
+
+                        <com.edu.kygroup.widget.DrawableCenterTextView
+                            android:id="@+id/btn_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/icon_comment"
+                            android:drawablePadding="3dip"
+                            android:padding="5dip"
+                            android:text="回复"
+                            android:textColor="@color/gray" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <com.edu.kygroup.widget.KyListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/content_layout"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_marginTop="13dip"
+                    android:background="@drawable/record_bg"
+                    android:cacheColorHint="@color/transparent"
+                    android:divider="@color/bbs_layout"
+                    android:dividerHeight="0.5dip"
+                    android:fadingEdge="none"
+                    android:listSelector="#00000000"
+                    android:scrollbars="none" >
+                </com.edu.kygroup.widget.KyListView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        android:paddingTop="4dp" >
+
+        <TextView
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bbs_shape"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="4dp"
+            android:text="发送"
+            android:textColor="#888888"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/input_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/send"
+            android:layout_toRightOf="@+id/layout_pic"
+            android:background="@drawable/textfield_default_holo_light"
+            android:textColor="@color/nomal_font_color"
+            android:textSize="13sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <RelativeLayout
+            android:id="@+id/layout_pic"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="5dip" >
+
+            <ImageView
+                android:id="@+id/img_camera"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:scaleType="centerCrop"
+                android:src="@drawable/camera" />
+
+            <ImageView
+                android:id="@+id/img_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/del"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

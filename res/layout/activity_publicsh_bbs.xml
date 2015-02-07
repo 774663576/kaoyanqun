@@ -1,0 +1,49 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    android:padding="13dip"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.edu.kygroup.widget.ScrollViewGridView
+            android:id="@+id/imgGridview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="#00000000"
+            android:numColumns="4"
+            android:scrollbars="none" >
+        </com.edu.kygroup.widget.ScrollViewGridView>
+
+        <EditText
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="100dip"
+            android:background="@drawable/input_bg"
+            android:gravity="top"
+            android:hint="输入帖子内容"
+            android:maxLength="200"
+            android:padding="10dip"
+            android:textColor="#818181"
+            android:textSize="15sp" >
+        </EditText>
+
+        <Button
+            android:id="@+id/btnUpload"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_marginBottom="30dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/login_btn_selector"
+            android:text="发表"
+            android:textColor="#707070"
+            android:textSize="21sp" />
+    </LinearLayout>
+
+</ScrollView>

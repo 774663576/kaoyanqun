@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.edu.pullrefresh.PullToRefreshListView
+        android:id="@+id/search_result_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/bg_color"
+        android:dividerHeight="@dimen/width_line"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:horizontalSpacing="0dp"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth" />
+
+    <com.edu.pullrefresh.PullToRefreshListView
+        android:id="@+id/same_major_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/search_result_listview"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/bg_color"
+        android:dividerHeight="@dimen/width_line"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:horizontalSpacing="0dp"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:visibility="gone" />
+
+    <com.edu.pullrefresh.PullToRefreshListView
+        android:id="@+id/same_colleage_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/same_major_listview"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/bg_color"
+        android:dividerHeight="@dimen/width_line"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:horizontalSpacing="0dp"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:visibility="gone" />
+
+    <com.edu.pullrefresh.PullToRefreshListView
+        android:id="@+id/post_graduate_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/same_colleage_listview"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/bg_color"
+        android:dividerHeight="@dimen/width_line"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:horizontalSpacing="0dp"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/post_graduate_listview"
+        android:background="#e0e0e0" />
+
+    <LinearLayout
+        android:id="@+id/search_loadmore_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:clickable="false"
+        android:visibility="gone" >
+
+        <include layout="@layout/common_loadmore_layout" />
+    </LinearLayout>
+
+</RelativeLayout>

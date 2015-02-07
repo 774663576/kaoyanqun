@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bbs_default_color" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp" >
+
+        <com.edu.kygroup.widget.RoundImageView
+            android:id="@+id/pic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/pic_boy" />
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/pic"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/pic"
+            android:text="柏芝"
+            android:textColor="#6abfd4"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/pic"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="13:11"
+            android:textColor="@color/gray"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/response_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/time"
+            android:layout_below="@+id/time"
+            android:layout_marginTop="10dp"
+            android:text="@string/response"
+            android:textColor="#ff4444ee" />
+
+        <TextView
+            android:id="@+id/school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/nickname"
+            android:layout_below="@+id/nickname"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="3dp"
+            android:text="清华大学"
+            android:textColor="@color/gray"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/response_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/nickname"
+            android:layout_below="@+id/school"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/icon_msg_reply"
+            android:drawablePadding="3dp"
+            android:text="我是谁"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/response_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/nickname"
+            android:layout_below="@+id/response_to"
+            android:layout_marginTop="5dp"
+            android:text="恭喜发财"
+            android:textColor="#666666"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

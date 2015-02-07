@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroud"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/orderselectionlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#f8f8f8"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/search_browser"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:text="@string/search_broswer"
+            android:textColor="#5a5a5a"
+            android:textSize="16sp" />       
+
+        <TextView
+            android:id="@+id/search_post"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="1dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/search_post_graduate"
+            android:textColor="#5a5a5a"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/search_fellow"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="1dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/search_fellow"
+            android:textColor="#5a5a5a"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/search_classmates"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="1dp"
+            android:gravity="center"
+            android:text="@string/search_classmates"
+            android:layout_weight="1"
+            android:textColor="#5a5a5a"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/foot_line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/orderselectionlayout"
+        android:background="#cdcdcd" />
+
+    <ImageView
+        android:id="@+id/cursor"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignBottom="@+id/foot_line"
+        android:scaleType="matrix"
+        android:src="#FF8800" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/search_loadmore_layout"
+        android:layout_below="@+id/cursor"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:background="#000000"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+    <LinearLayout
+        android:id="@+id/search_loadmore_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="false"
+        android:visibility="gone" >
+
+        <include layout="@layout/common_loadmore_layout" />
+    </LinearLayout>
+
+</RelativeLayout>

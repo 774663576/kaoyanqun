@@ -1,0 +1,4 @@
+<resources>
+	<dimen name="gallery_width">60dp</dimen>
+	<dimen name="top_tab_width">35dp</dimen>
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="arr_34">
+        <item>北京大学</item>
+        <item>中国人民大学</item>
+        <item>清华大学</item>
+        <item>北京航空航天大学</item>
+        <item>北京理工大学</item>
+        <item>中国农业大学</item>
+        <item>北京师范大学</item>
+        <item>南开大学</item>
+        <item>天津大学</item>
+        <item>大连理工大学</item>
+        <item>东北大学</item>
+        <item>吉林大学</item>
+        <item>哈尔滨工业大学</item>
+        <item>复旦大学</item>
+        <item>同济大学</item>
+        <item>上海交通大学</item>
+        <item>南京大学</item>
+        <item>东南大学</item>
+        <item>浙江大学</item>
+        <item>中国科学技术大学</item>
+        <item>厦门大学</item>
+        <item>山东大学</item>
+        <item>武汉大学</item>
+        <item>华中科技大学</item>
+        <item>湖南大学</item>
+        <item>中南大学</item>
+        <item>中山大学</item>
+        <item>华南理工大学</item>
+        <item>四川大学</item>
+        <item>重庆大学</item>
+        <item>电子科技大学</item>
+        <item>西安交通大学</item>
+        <item>西北工业大学</item>
+        <item>兰州大学</item>
+    </string-array>
+    <string-array name="arr_34_code">
+        <item>10001</item>
+        <item>10002</item>
+        <item>10003</item>
+        <item>10006</item>
+        <item>10007</item>
+        <item>10019</item>
+        <item>10027</item>
+        <item>10055</item>
+        <item>10056</item>
+        <item>10141</item>
+        <item>10145</item>
+        <item>10183</item>
+        <item>10213</item>
+        <item>10246</item>
+        <item>10247</item>
+        <item>10248</item>
+        <item>10284</item>
+        <item>10286</item>
+        <item>10335</item>
+        <item>10358</item>
+        <item>10384</item>
+        <item>10422</item>
+        <item>10486</item>
+        <item>10487</item>
+        <item>10532</item>
+        <item>10533</item>
+        <item>10558</item>
+        <item>10561</item>
+        <item>10610</item>
+        <item>10611</item>
+        <item>10614</item>
+        <item>10698</item>
+        <item>10699</item>
+        <item>10730</item>
+    </string-array>
+
+</resources>

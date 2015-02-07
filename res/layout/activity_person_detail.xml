@@ -1,0 +1,262 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/base_title_height"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="个人信息"
+        android:textColor="#343334"
+        android:textSize="@dimen/title_text_size" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_below="@+id/title"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:scaleType="centerCrop"
+                android:src="@drawable/person_bg" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView1"
+                android:layout_marginLeft="76dp"
+                android:background="#64ffffff"
+                android:paddingBottom="10dip"
+                android:paddingLeft="38dip"
+                android:paddingTop="10dip"
+                android:text="张三"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView1"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="-47dip" >
+
+                <ImageView
+                    android:id="@+id/iv_headbg"
+                    android:layout_width="95dip"
+                    android:layout_height="95dip"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/person_avatar_bg" />
+                <!-- com.edu.kygroup.widget.CircularImage -->
+
+                <com.edu.kygroup.widget.CircularImage
+                    android:id="@+id/img_avatar"
+                    android:layout_width="90dip"
+                    android:layout_height="90dip"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/pic_boy" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/img_renzheng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_name"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="12dip"
+                android:layout_toRightOf="@+id/relativeLayout1"
+                android:src="@drawable/un_certifiaction" />
+
+            <TextView
+                android:id="@+id/txt_renzheng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_name"
+                android:layout_marginTop="10dip"
+                android:layout_toRightOf="@+id/img_renzheng"
+                android:drawablePadding="8dip"
+                android:paddingBottom="5dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="15dip"
+                android:text="多浪费空间按当时"
+                android:textColor="#999999"
+                android:textSize="13sp" />
+
+            <!-- <RadioGroup -->
+            <!-- android:id="@+id/tab" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_below="@+id/txt_renzheng" -->
+            <!-- android:layout_marginBottom="8dip" -->
+            <!-- android:layout_marginTop="30dip" -->
+            <!-- android:background="@color/white" -->
+            <!-- android:orientation="horizontal" > -->
+
+
+            <!-- <RadioButton -->
+            <!-- android:id="@+id/button1" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_weight="1" -->
+            <!-- android:background="@null" -->
+            <!-- android:button="@null" -->
+            <!-- android:gravity="center" -->
+            <!-- android:paddingBottom="8dip" -->
+            <!-- android:paddingTop="8dip" -->
+            <!-- android:text="资料" -->
+            <!-- android:textColor="#999999" /> -->
+
+
+            <!-- <RadioButton -->
+            <!-- android:id="@+id/button2" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_weight="1" -->
+            <!-- android:background="@null" -->
+            <!-- android:button="@null" -->
+            <!-- android:gravity="center" -->
+            <!-- android:text="动态" -->
+            <!-- android:textColor="#999999" /> -->
+
+
+            <!-- <RadioButton -->
+            <!-- android:id="@+id/button3" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_weight="1" -->
+            <!-- android:background="@null" -->
+            <!-- android:button="@null" -->
+            <!-- android:gravity="center" -->
+            <!-- android:text="考研" -->
+            <!-- android:textColor="#999999" /> -->
+            <!-- </RadioGroup> -->
+
+            <FrameLayout
+                android:id="@+id/realtabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_renzheng" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#666666"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/msg_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/friends_selector" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <TextView
+                    android:id="@+id/msg_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_profilebar_chat_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/msg_id"
+                    android:text="@string/message"
+                    android:textColor="#f18e10" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/focus_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/friends_selector" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <TextView
+                    android:id="@+id/focus_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_profilebar_follow_normal" />
+
+                <TextView
+                    android:id="@+id/focus_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/focus_id"
+                    android:text="@string/add"
+                    android:textColor="#f18e10" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/forbid_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/friends_selector" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <TextView
+                    android:id="@+id/focus_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_profilebar_forbid_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/focus_id"
+                    android:text="@string/forbid"
+                    android:textColor="#f18e10" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

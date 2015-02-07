@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/layout_zhaoshengxinxi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/kaoshixinxi"
+            android:drawablePadding="7dip"
+            android:gravity="center_vertical"
+            android:text="招生信息"
+            android:textColor="@color/nomal_font_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:drawablePadding="10dip"
+            android:drawableRight="@drawable/arrow_right"
+            android:text="方向、导师、人数、科目 "
+            android:textColor="@color/zhushi_font_color"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_kaoyanluntan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_zhaoshengxinxi"
+        android:layout_marginTop="1dip"
+        android:background="@color/white"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/luntan"
+            android:drawablePadding="7dip"
+            android:gravity="center_vertical"
+            android:text="考研论坛"
+            android:textColor="@color/nomal_font_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:drawablePadding="10dip"
+            android:drawableRight="@drawable/arrow_right"
+            android:text="BBS、招生、复试、调剂 、录取"
+            android:textColor="@color/zhushi_font_color"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_zhaoshengyaunxiao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_kaoyanluntan"
+        android:layout_marginTop="1dip"
+        android:background="@color/white"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/zhaoshengyuanxiao"
+            android:drawablePadding="7dip"
+            android:gravity="center_vertical"
+            android:text="招生院校"
+            android:textColor="@color/nomal_font_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:drawablePadding="10dip"
+            android:drawableRight="@drawable/arrow_right"
+            android:text="本年度招收本专业的院校 "
+            android:textColor="@color/zhushi_font_color"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_tiaojiyuanxiao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_zhaoshengyaunxiao"
+        android:layout_marginTop="1dip"
+        android:background="@color/white"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/tiaojiyuanxiao"
+            android:drawablePadding="7dip"
+            android:gravity="center_vertical"
+            android:text="调剂院校"
+            android:textColor="@color/nomal_font_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:drawablePadding="10dip"
+            android:drawableRight="@drawable/arrow_right"
+            android:text="上一年本专业接收调剂的院校"
+            android:textColor="@color/zhushi_font_color"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_chat"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_below="@+id/layout_tiaojiyuanxiao"
+        android:layout_marginTop="1dip"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/group_chat_img"
+        android:drawablePadding="5dip"
+        android:drawableRight="@drawable/ic_common_arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:text="考研群"
+        android:textColor="@color/nomal_font_color"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_chat"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/yanyou"
+            android:drawablePadding="7dip"
+            android:gravity="center_vertical"
+            android:text="@string/search_post_graduate"
+            android:textColor="@color/nomal_font_color"
+            android:textSize="16sp" />
+
+        <HorizontalScrollView
+            android:id="@+id/post_graduate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/imageView1"
+            android:paddingBottom="10dip"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/scroll_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/none_mates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:singleLine="true"
+                    android:text="@string/none_mates"
+                    android:textColor="#666666"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dp"
+            android:paddingTop="10dip"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+
+</RelativeLayout>

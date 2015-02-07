@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="big_font_color">#343334</color>
+    <color name="nomal_font_color">#45413C</color>
+    <color name="zhushi_font_color">#BABABA</color>
+    <color name="bg_color">#e6e6e6</color>
+    <color name="tabgray">#7c7c7c</color>
+    <color name="gray">#a0a0a0</color>
+    <color name="gray_harf">#50a0a0a0</color>
+    <color name="white">#f6f6f6</color>
+    <color name="green">#33FF00</color>
+    <color name="black">#000000</color>
+    <color name="bbs_default_color">#eeeeee</color>
+    <color name="transparent">#503f3e3e</color>
+    <color name="listviewitem">#AAAAAA</color>
+    <color name="zebraline">#90D0D0D0</color>
+    <color name="alert_black">#404040</color>
+    <color name="red">#FF0000</color>
+    <color name="gold">#ceb956</color>
+    <color name="blue">#0000FF</color>
+    <color name="change">#40000000</color>
+    <color name="button2">#EB7E86</color>
+    <color name="whitefornet">#F3F3F3</color>
+    <color name="transparent_00">#00000000</color>
+    <color name="money">#BA001D</color>
+    <color name="sea_blue">#ff1D91C4</color>
+    <color name="light_red">#ffff0000</color>
+    <color name="title_bg">#E4E4E4</color>
+    <color name="title_divider">#DDDDDD</color>
+    <color name="title_text_color">#666666</color>
+    <color name="login_btn_press_color">#9A9A3C</color>
+    <color name="login_btn_normal_color">#1B8086</color>
+    <color name="setting_blue">#238BDB</color>
+    <color name="setting_more_blue">#0F81D9</color>
+    <color name="setting_gray_bg">#ECE7D9</color>
+    <color name="setting_black">#1E1D1C</color>
+    <color name="setting_bg">#FFFBF0</color>
+    <color name="select_scholl_color">#f3f1da</color>
+    <color name="color_d5">#d5d5d5</color>
+    <!-- 修改密码 -->
+    <color name="str_color">#ECECEC</color>
+    <color name="btn_press_color">#393939</color>
+    <color name="btn_normal_color">#5C5C5C</color>
+    <color name="edit_normal_color">#EBE7DC</color>
+    <color name="edit_input_color">#FFFFFF</color>
+    <color name="bottom_bar_color">#373635</color>
+    <color name="commont_green_bg">#7CB2CA</color>
+    <color name="backgroud">#ffffff</color>
+    <color name="selec_item_bg">#e6f3fb</color>
+
+    <!-- 分割横线颜色 -->
+    <color name="yellow">#f18e10</color>
+    <color name="green_title">#028818</color>
+    <color name="gray_background">#F2F2F2</color>
+    <color name="gray_title">#46BF18</color>
+    <color name="bbs_layout">#EDEDED</color>
+    <color name="bbs_item">#FEFEFE</color>
+    <color name="tab_color">#999999</color>
+    <color name="tab_select_color">#ef6a43</color>
+    <!-- 环信 -->
+    <color name="common_top_bar_blue">#4ebcd3</color>
+    <color name="btn_login_normal">#007086</color>
+    <color name="btn_login_pressed">#303744</color>
+    <color name="btn_logout_normal">#d33f3f</color>
+    <color name="btn_logout_pressed">#DA5A4D</color>
+    <color name="btn_register_normal">#2dafa3</color>
+    <color name="btn_register_pressed">#4ebcd3</color>
+    <color name="common_bottom_bar_normal_bg">#2d2f31</color>
+    <color name="common_bottom_bar_selected_bg">#161718</color>
+    <color name="common_botton_bar_blue">#2ea7e0</color>
+    <color name="common_bg">#fcfcfc</color>
+    <color name="btn_pressed_green_solid">#B6DA53</color>
+    <color name="divider_list">#cccccc</color>
+    <color name="top_bar_normal_bg">#4ebcd3</color>
+    <color name="error_item_color">#F6EBE6</color>
+    <color name="bottom_bar_normal_bg">#2D2F31</color>
+    <color name="bottom_text_color_normal">#ffffff</color>
+    <color name="btn_white_normal">#f7f8f8</color>
+    <color name="btn_white_pressed">#b5b5b6</color>
+    <color name="btn_green_noraml">#68C270</color>
+    <color name="btn_green_pressed">#6FCD78</color>
+    <color name="btn_gray_normal">#c0c0c0</color>
+    <color name="btn_gray_pressed_status">#b5b5b6</color>
+    <color name="btn_gray_pressed">#666667</color>
+    <color name="btn_blue_normal">#1e90ff</color>
+    <color name="btn_blue_pressed">#0066FF</color>
+    <color name="orange">#FFA500</color>
+    <color name="gray_pressed">#b5b5b6</color>
+    <color name="gray_normal">#666667</color>
+    <color name="grid_state_pressed">#1Affffff</color>
+    <color name="grid_state_focused">#80000000</color>
+    <color name="voip_interface_text_color">#bababa</color>
+    <color name="black_deep">#FF000000</color>
+
+</resources>

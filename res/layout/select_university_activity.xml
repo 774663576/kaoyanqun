@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/base_title_height" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLength="8"
+            android:singleLine="true"
+            android:text="添加学校"
+            android:textColor="@color/nomal_font_color"
+            android:textSize="@dimen/title_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tip_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+        android:layout_below="@+id/title_layout"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/select_by_school"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/regisiter_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onSelectSchool"
+                android:text="@string/select_by_shcool"
+                android:textColor="@color/title_text_color"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/line_school"
+                android:layout_width="match_parent"
+                android:layout_height="10dip"
+                android:background="@color/orange" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="11dp"
+            android:layout_marginTop="11dp"
+            android:background="#666666" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/select_by_object"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/regisiter_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onSelectSubject"
+                android:text="@string/select_by_subject"
+                android:textColor="@color/title_text_color"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/line_object"
+                android:layout_width="match_parent"
+                android:layout_height="10dip"
+                android:background="@color/orange" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tip_layout"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</RelativeLayout>

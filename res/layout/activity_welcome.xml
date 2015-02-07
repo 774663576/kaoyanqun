@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:paddingBottom="30dip"
+        android:visibility="invisible" >
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="48dip"
+            android:layout_marginLeft="50dip"
+            android:layout_marginRight="50dip"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:text="开启考研之旅"
+            android:textColor="#ff0000"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_bottom"
+        android:gravity="center"
+        android:paddingBottom="50dip" >
+
+        <View
+            android:id="@+id/cicle1"
+            android:layout_width="8dip"
+            android:layout_height="8dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/share_white" />
+
+        <View
+            android:id="@+id/cicle2"
+            android:layout_width="8dip"
+            android:layout_height="8dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/share_gray" />
+
+        <View
+            android:id="@+id/cicle3"
+            android:layout_width="8dip"
+            android:layout_height="8dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/share_gray" />
+
+        <View
+            android:id="@+id/cicle4"
+            android:layout_width="8dip"
+            android:layout_height="8dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/share_gray" />
+    </LinearLayout>
+
+</RelativeLayout>

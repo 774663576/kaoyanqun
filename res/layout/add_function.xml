@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#ffffffff">
+
+    <com.edu.kygroup.widget.FunctionGridView
+        android:id="@+id/function_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:numColumns="3" 
+		android:listSelector="@null"
+        >
+    </com.edu.kygroup.widget.FunctionGridView>
+
+</RelativeLayout>

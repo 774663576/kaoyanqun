@@ -1,0 +1,1096 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="jiaoyubu_code">
+        <item>10001</item>
+        <item>10002</item>
+        <item>10003</item>
+        <item>10004</item>
+        <item>10008</item>
+        <item>10010</item>
+        <item>10013</item>
+        <item>10019</item>
+        <item>10022</item>
+        <item>10026</item>
+        <item>10027</item>
+        <item>10030</item>
+        <item>10032</item>
+        <item>10033</item>
+        <item>10034</item>
+        <item>10036</item>
+        <item>10042</item>
+        <item>10045</item>
+        <item>10047</item>
+        <item>10048</item>
+        <item>10053</item>
+        <item>10054</item>
+        <item>11413</item>
+        <item>11414</item>
+        <item>11415</item>
+        <item>10055</item>
+        <item>10056</item>
+        <item>10079</item>
+        <item>10141</item>
+        <item>10145</item>
+        <item>10183</item>
+        <item>10200</item>
+        <item>10225</item>
+        <item>10246</item>
+        <item>10247</item>
+        <item>10248</item>
+        <item>10251</item>
+        <item>10255</item>
+        <item>10269</item>
+        <item>10271</item>
+        <item>10272</item>
+        <item>10284</item>
+        <item>10286</item>
+        <item>10290</item>
+        <item>10294</item>
+        <item>10295</item>
+        <item>10307</item>
+        <item>10316</item>
+        <item>10335</item>
+        <item>10359</item>
+        <item>10384</item>
+        <item>10422</item>
+        <item>10423</item>
+        <item>10425</item>
+        <item>10486</item>
+        <item>10487</item>
+        <item>10491</item>
+        <item>10497</item>
+        <item>10504</item>
+        <item>10511</item>
+        <item>10520</item>
+        <item>10532</item>
+        <item>10533</item>
+        <item>10558</item>
+        <item>10561</item>
+        <item>10610</item>
+        <item>10613</item>
+        <item>10614</item>
+        <item>10651</item>
+        <item>10635</item>
+        <item>10611</item>
+        <item>10698</item>
+        <item>10701</item>
+        <item>10710</item>
+        <item>10712</item>
+        <item>10718</item>
+        <item>10730</item>
+    </string-array>
+    <string-array name="zhonggongzhongyangbangongting_code">
+        <item>10018</item>
+    </string-array>
+    <string-array name="waijiaobu_code">
+        <item>10040</item>
+    </string-array>
+    <string-array name="zhongguokexueyuan_code">
+        <item>10358</item>
+        <item>10000</item>
+    </string-array>
+    <string-array name="guojiaminzushiwuweiyuanhui_code">
+        <item>10052</item>
+        <item>10524</item>
+        <item>10656</item>
+        <item>10742</item>
+        <item>11407</item>
+        <item>12026</item>
+    </string-array>
+    <string-array name="gonganbu_code">
+        <item>10041</item>
+        <item>10175</item>
+        <item>11105</item>
+    </string-array>
+    <string-array name="sifabu_code">
+        <item>11903</item>
+    </string-array>
+    <string-array name="gongyeyuxinxihuabu_code">
+        <item>10006</item>
+        <item>10007</item>
+        <item>10213</item>
+        <item>10217</item>
+        <item>10287</item>
+        <item>10288</item>
+        <item>10699</item>
+    </string-array>
+    <string-array name="guojiaweishenghejihuashengyuweiyuanhui_code">
+        <item>10023</item>
+        <item>84501</item>
+        <item>84508</item>
+        <item>84512</item>
+    </string-array>
+    <string-array name="haiguanzongshu_code">
+        <item>10274</item>
+    </string-array>
+    <string-array name="zhongguominyonghangkongju_code">
+        <item>10059</item>
+        <item>10624</item>
+    </string-array>
+    <string-array name="zhongguodizhenju_code">
+        <item>11775</item>
+        <item>85401</item>
+        <item>85402</item>
+        <item>85403</item>
+        <item>85404</item>
+        <item>85405</item>
+        <item>85406</item>
+        <item>85407</item>
+    </string-array>
+    <string-array name="guowuyuanqiaowubangongshi_code">
+        <item>10385</item>
+        <item>10559</item>
+    </string-array>
+    <string-array name="guojiaanquanshengchanjianduguanlizongju_code">
+        <item>11104</item>
+    </string-array>
+    <string-array name="guojiatiyuzongju_code">
+        <item>10043</item>
+        <item>10277</item>
+        <item>10522</item>
+    </string-array>
+    <string-array name="zhonghuaquanguozonggonghui_code">
+        <item>12453</item>
+    </string-array>
+    <string-array name="zhongguogongchanzhuyiqingniantuanzhongyang_code">
+        <item>11625</item>
+    </string-array>
+    <string-array name="zhonghuaquanguofunvlianhehui_code">
+        <item>11149</item>
+    </string-array>
+    <string-array name="beijingshi_code">
+        <item>10005</item>
+        <item>10009</item>
+        <item>10011</item>
+        <item>10012</item>
+        <item>10015</item>
+        <item>10016</item>
+        <item>10017</item>
+        <item>10020</item>
+        <item>10025</item>
+        <item>10028</item>
+        <item>10029</item>
+        <item>10031</item>
+        <item>10037</item>
+        <item>10038</item>
+        <item>10046</item>
+        <item>10049</item>
+        <item>10050</item>
+        <item>10051</item>
+        <item>11232</item>
+        <item>11417</item>
+        <item>11418</item>
+        <item>83702</item>
+        <item>87102</item>
+        <item>87103</item>
+        <item>87110</item>
+        <item>87111</item>
+        <item>87112</item>
+        <item>87113</item>
+        <item>87120</item>
+    </string-array>
+    <string-array name="tianjinshi_code">
+        <item>10057</item>
+        <item>10058</item>
+        <item>10060</item>
+        <item>10061</item>
+        <item>10062</item>
+        <item>10063</item>
+        <item>10065</item>
+        <item>10066</item>
+        <item>10068</item>
+        <item>10069</item>
+        <item>10070</item>
+        <item>10072</item>
+        <item>10073</item>
+        <item>10792</item>
+        <item>10071</item>
+    </string-array>
+    <string-array name="shanghaishi_code">
+        <item>10252</item>
+        <item>10254</item>
+        <item>10256</item>
+        <item>10259</item>
+        <item>10264</item>
+        <item>10268</item>
+        <item>10270</item>
+        <item>10273</item>
+        <item>10276</item>
+        <item>10278</item>
+        <item>10279</item>
+        <item>10280</item>
+        <item>10856</item>
+        <item>11047</item>
+        <item>11458</item>
+        <item>11835</item>
+        <item>12044</item>
+        <item>82707</item>
+        <item>82718</item>
+        <item>83502</item>
+        <item>87901</item>
+        <item>87902</item>
+        <item>87903</item>
+    </string-array>
+    <string-array name="hebeisheng_code">
+        <item>10075</item>
+        <item>10076</item>
+        <item>10077</item>
+        <item>10080</item>
+        <item>10081</item>
+        <item>10082</item>
+        <item>10084</item>
+        <item>10086</item>
+        <item>10089</item>
+        <item>10092</item>
+        <item>10093</item>
+        <item>10094</item>
+        <item>10107</item>
+        <item>10216</item>
+        <item>10798</item>
+        <item>11420</item>
+        <item>11629</item>
+        <item>11832</item>
+        <item>12784</item>
+    </string-array>
+    <string-array name="shanxisheng_code">
+        <item>10108</item>
+        <item>10109</item>
+        <item>10110</item>
+        <item>10112</item>
+        <item>10113</item>
+        <item>10114</item>
+        <item>10117</item>
+        <item>10118</item>
+        <item>10119</item>
+        <item>10125</item>
+        <item>10809</item>
+        <item>87401</item>
+    </string-array>
+    <string-array name="neimengguzizhiqu_code">
+        <item>10126</item>
+        <item>10127</item>
+        <item>10128</item>
+        <item>10129</item>
+        <item>10132</item>
+        <item>10135</item>
+        <item>10136</item>
+        <item>10138</item>
+        <item>10139</item>
+    </string-array>
+    <string-array name="liaoningsheng_code">
+        <item>10140</item>
+        <item>10142</item>
+        <item>10143</item>
+        <item>10144</item>
+        <item>10146</item>
+        <item>10147</item>
+        <item>10148</item>
+        <item>10149</item>
+        <item>10150</item>
+        <item>10152</item>
+        <item>10153</item>
+        <item>10154</item>
+        <item>10157</item>
+        <item>10158</item>
+        <item>10159</item>
+        <item>10160</item>
+        <item>10161</item>
+        <item>10162</item>
+        <item>10163</item>
+        <item>10164</item>
+        <item>10165</item>
+        <item>10166</item>
+        <item>10167</item>
+        <item>10169</item>
+        <item>10172</item>
+        <item>10173</item>
+        <item>10176</item>
+        <item>10177</item>
+        <item>10178</item>
+        <item>11035</item>
+        <item>11258</item>
+        <item>11632</item>
+    </string-array>
+    <string-array name="jilinsheng_code">
+        <item>10184</item>
+        <item>10186</item>
+        <item>10188</item>
+        <item>10190</item>
+        <item>10191</item>
+        <item>10192</item>
+        <item>10193</item>
+        <item>10199</item>
+        <item>10201</item>
+        <item>10203</item>
+        <item>10205</item>
+        <item>10207</item>
+        <item>10208</item>
+        <item>10209</item>
+        <item>10964</item>
+        <item>11437</item>
+        <item>11726</item>
+    </string-array>
+    <string-array name="heilongjiangsheng_code">
+        <item>10212</item>
+        <item>10214</item>
+        <item>10219</item>
+        <item>10220</item>
+        <item>10222</item>
+        <item>10223</item>
+        <item>10224</item>
+        <item>10226</item>
+        <item>10228</item>
+        <item>10229</item>
+        <item>10231</item>
+        <item>10232</item>
+        <item>10233</item>
+        <item>10240</item>
+        <item>10242</item>
+        <item>11446</item>
+        <item>87801</item>
+        <item>87802</item>
+        <item>87804</item>
+    </string-array>
+    <string-array name="jiangsusheng_code">
+        <item>10285</item>
+        <item>10289</item>
+        <item>10291</item>
+        <item>10292</item>
+        <item>10293</item>
+        <item>10298</item>
+        <item>10299</item>
+        <item>10300</item>
+        <item>10304</item>
+        <item>10312</item>
+        <item>10313</item>
+        <item>10315</item>
+        <item>10319</item>
+        <item>10320</item>
+        <item>10327</item>
+        <item>10330</item>
+        <item>10331</item>
+        <item>10332</item>
+        <item>11049</item>
+        <item>11117</item>
+        <item>11276</item>
+        <item>11287</item>
+        <item>11463</item>
+        <item>11641</item>
+        <item>88001</item>
+        <item>88002</item>
+    </string-array>
+    <string-array name="zhejiangsheng_code">
+        <item>10336</item>
+        <item>10337</item>
+        <item>10338</item>
+        <item>10340</item>
+        <item>10341</item>
+        <item>10343</item>
+        <item>10344</item>
+        <item>10345</item>
+        <item>10346</item>
+        <item>10347</item>
+        <item>10349</item>
+        <item>10351</item>
+        <item>10353</item>
+        <item>10355</item>
+        <item>10356</item>
+        <item>10876</item>
+        <item>11057</item>
+        <item>11482</item>
+        <item>11646</item>
+        <item>11647</item>
+        <item>88101</item>
+    </string-array>
+    <string-array name="anhuisheng_code">
+        <item>10357</item>
+        <item>10360</item>
+        <item>10361</item>
+        <item>10363</item>
+        <item>10364</item>
+        <item>10366</item>
+        <item>10367</item>
+        <item>10368</item>
+        <item>10369</item>
+        <item>10370</item>
+        <item>10371</item>
+        <item>10372</item>
+        <item>10373</item>
+        <item>10378</item>
+        <item>10878</item>
+        <item>10879</item>
+        <item>11059</item>
+        <item>14098</item>
+    </string-array>
+    <string-array name="fujiansheng_code">
+        <item>10386</item>
+        <item>10388</item>
+        <item>10389</item>
+        <item>10390</item>
+        <item>10392</item>
+        <item>10393</item>
+        <item>10394</item>
+        <item>10395</item>
+        <item>10399</item>
+        <item>10402</item>
+        <item>11062</item>
+    </string-array>
+    <string-array name="jiangxisheng_code">
+        <item>10403</item>
+        <item>10404</item>
+        <item>10405</item>
+        <item>10406</item>
+        <item>10407</item>
+        <item>10408</item>
+        <item>10410</item>
+        <item>10412</item>
+        <item>10413</item>
+        <item>10414</item>
+        <item>10417</item>
+        <item>10418</item>
+        <item>10419</item>
+        <item>10421</item>
+        <item>11318</item>
+        <item>11319</item>
+    </string-array>
+    <string-array name="shandongsheng_code">
+        <item>10424</item>
+        <item>10426</item>
+        <item>10427</item>
+        <item>10429</item>
+        <item>10430</item>
+        <item>10431</item>
+        <item>10433</item>
+        <item>10434</item>
+        <item>10435</item>
+        <item>10438</item>
+        <item>10439</item>
+        <item>10440</item>
+        <item>10441</item>
+        <item>10443</item>
+        <item>10445</item>
+        <item>10446</item>
+        <item>10447</item>
+        <item>10451</item>
+        <item>10456</item>
+        <item>10457</item>
+        <item>10458</item>
+        <item>10908</item>
+        <item>11065</item>
+        <item>11066</item>
+        <item>11510</item>
+        <item>11688</item>
+        <item>14100</item>
+    </string-array>
+    <string-array name="henansheng_code">
+        <item>10078</item>
+        <item>10459</item>
+        <item>10460</item>
+        <item>10462</item>
+        <item>10463</item>
+        <item>10464</item>
+        <item>10465</item>
+        <item>10466</item>
+        <item>10467</item>
+        <item>10471</item>
+        <item>10472</item>
+        <item>10475</item>
+        <item>10476</item>
+        <item>10477</item>
+        <item>10479</item>
+        <item>10481</item>
+        <item>10482</item>
+        <item>10484</item>
+        <item>10485</item>
+    </string-array>
+    <string-array name="hubeisheng_code">
+        <item>10488</item>
+        <item>10489</item>
+        <item>10490</item>
+        <item>10495</item>
+        <item>10496</item>
+        <item>10500</item>
+        <item>10507</item>
+        <item>10512</item>
+        <item>10513</item>
+        <item>10514</item>
+        <item>10517</item>
+        <item>10523</item>
+        <item>10525</item>
+        <item>10927</item>
+        <item>10929</item>
+        <item>11072</item>
+        <item>11075</item>
+        <item>11524</item>
+        <item>11600</item>
+        <item>88701</item>
+    </string-array>
+    <string-array name="hunansheng_code">
+        <item>10530</item>
+        <item>10531</item>
+        <item>10534</item>
+        <item>10536</item>
+        <item>10537</item>
+        <item>10538</item>
+        <item>10541</item>
+        <item>10542</item>
+        <item>10543</item>
+        <item>10547</item>
+        <item>10553</item>
+        <item>10554</item>
+        <item>10555</item>
+        <item>11342</item>
+        <item>11535</item>
+    </string-array>
+    <string-array name="guangdongsheng_code">
+        <item>10560</item>
+        <item>10564</item>
+        <item>10566</item>
+        <item>10570</item>
+        <item>10571</item>
+        <item>10572</item>
+        <item>10573</item>
+        <item>10574</item>
+        <item>10585</item>
+        <item>10586</item>
+        <item>10587</item>
+        <item>10588</item>
+        <item>10590</item>
+        <item>10592</item>
+        <item>11078</item>
+        <item>11347</item>
+        <item>11349</item>
+        <item>11540</item>
+        <item>11845</item>
+        <item>11846</item>
+        <item>11847</item>
+        <item>12121</item>
+        <item>88901</item>
+        <item>88911</item>
+    </string-array>
+    <string-array name="guangxizhuangzuzizhiqu_code">
+        <item>10593</item>
+        <item>10594</item>
+        <item>10595</item>
+        <item>10596</item>
+        <item>10598</item>
+        <item>10599</item>
+        <item>10600</item>
+        <item>10601</item>
+        <item>10602</item>
+        <item>10603</item>
+        <item>10607</item>
+        <item>10608</item>
+        <item>11548</item>
+    </string-array>
+    <string-array name="hainansheng_code">
+        <item>10589</item>
+        <item>11100</item>
+        <item>11658</item>
+        <item>11810</item>
+    </string-array>
+    <string-array name="chongqingshi_code">
+        <item>10617</item>
+        <item>10618</item>
+        <item>10631</item>
+        <item>10637</item>
+        <item>10643</item>
+        <item>10650</item>
+        <item>10652</item>
+        <item>10655</item>
+        <item>11551</item>
+        <item>11660</item>
+        <item>11799</item>
+    </string-array>
+    <string-array name="sichuansheng_code">
+        <item>10615</item>
+        <item>10616</item>
+        <item>10619</item>
+        <item>10621</item>
+        <item>10622</item>
+        <item>10623</item>
+        <item>10626</item>
+        <item>10632</item>
+        <item>10633</item>
+        <item>10634</item>
+        <item>10636</item>
+        <item>10638</item>
+        <item>10639</item>
+        <item>10653</item>
+        <item>10654</item>
+        <item>12212</item>
+        <item>13705</item>
+        <item>89101</item>
+    </string-array>
+    <string-array name="guizhousheng_code">
+        <item>10657</item>
+        <item>10660</item>
+        <item>10661</item>
+        <item>10662</item>
+        <item>10663</item>
+        <item>10670</item>
+        <item>10671</item>
+        <item>10672</item>
+    </string-array>
+    <string-array name="yunnansheng_code">
+        <item>10673</item>
+        <item>10674</item>
+        <item>10676</item>
+        <item>10677</item>
+        <item>10678</item>
+        <item>10679</item>
+        <item>10680</item>
+        <item>10681</item>
+        <item>10689</item>
+        <item>10690</item>
+        <item>10691</item>
+        <item>11392</item>
+        <item>86401</item>
+    </string-array>
+    <string-array name="xicangzizhiqu_code">
+        <item>10694</item>
+        <item>10695</item>
+        <item>10696</item>
+    </string-array>
+    <string-array name="sanxisheng_code">
+        <item>10697</item>
+        <item>10700</item>
+        <item>10702</item>
+        <item>10703</item>
+        <item>10704</item>
+        <item>10705</item>
+        <item>10708</item>
+        <item>10709</item>
+        <item>10716</item>
+        <item>10719</item>
+        <item>10720</item>
+        <item>10721</item>
+        <item>10724</item>
+        <item>10726</item>
+        <item>10727</item>
+        <item>10728</item>
+        <item>10729</item>
+        <item>11560</item>
+        <item>11664</item>
+        <item>11840</item>
+        <item>12715</item>
+    </string-array>
+    <string-array name="gansusheng_code">
+        <item>10731</item>
+        <item>10732</item>
+        <item>10733</item>
+        <item>10735</item>
+        <item>10736</item>
+        <item>10739</item>
+        <item>10741</item>
+        <item>11406</item>
+        <item>83505</item>
+    </string-array>
+    <string-array name="qinghaisheng_code">
+        <item>10743</item>
+        <item>10746</item>
+        <item>10748</item>
+    </string-array>
+    <string-array name="ningxiahuizuzizhiqu_code">
+        <item>10749</item>
+        <item>10752</item>
+        <item>10753</item>
+    </string-array>
+    <string-array name="xinjiangweiwuerzizhiqu_code">
+        <item>10755</item>
+        <item>10758</item>
+        <item>10760</item>
+        <item>10762</item>
+        <item>10763</item>
+        <item>10764</item>
+        <item>10766</item>
+        <item>10768</item>
+        <item>10997</item>
+    </string-array>
+    <string-array name="kexuejishubu_code">
+        <item>80901</item>
+    </string-array>
+    <string-array name="caizhengbu_code">
+        <item>80401</item>
+        <item>80402</item>
+        <item>80403</item>
+        <item>81601</item>
+    </string-array>
+    <string-array name="shangwubu_code">
+        <item>82001</item>
+    </string-array>
+    <string-array name="nongyebu_code">
+        <item>82101</item>
+        <item>82110</item>
+    </string-array>
+    <string-array name="shuilibu_code">
+        <item>82301</item>
+        <item>82305</item>
+        <item>82306</item>
+    </string-array>
+    <string-array name="zhufanghechengxiangjianshebu_code">
+        <item>82402</item>
+    </string-array>
+    <string-array name="guotuziyuanbu_code">
+        <item>82501</item>
+    </string-array>
+    <string-array name="xinjiangshengchanjianshebingtuan_code">
+        <item>10757</item>
+        <item>10759</item>
+    </string-array>
+    <string-array name="zhongguotieluzonggongsi_code">
+        <item>83801</item>
+    </string-array>
+    <string-array name="jiaotongyunshubu_code">
+        <item>10151</item>
+        <item>83901</item>
+        <item>83902</item>
+        <item>80901</item>
+    </string-array>
+    <string-array name="wenhuabu_code">
+        <item>84201</item>
+    </string-array>
+    <string-array name="guojiaguangbodianyingdianshizongju_code">
+        <item>84202</item>
+    </string-array>
+    <string-array name="zhongguoqixiangju_code">
+        <item>85101</item>
+    </string-array>
+    <string-array name="guojiahaiyangju_code">
+        <item>85304</item>
+        <item>85305</item>
+        <item>85301</item>
+        <item>85302</item>
+        <item>85303</item>
+    </string-array>
+    <string-array name="guojiazhiliangjiandujianyanjianyizongju_code">
+        <item>85801</item>
+    </string-array>
+    <string-array name="guojialinyeju_code">
+        <item>82201</item>
+    </string-array>
+    <string-array name="huanjingbaohubu_code">
+        <item>82405</item>
+    </string-array>
+    <string-array name="guojiayancaozhuanmaiju_code">
+        <item>86601</item>
+    </string-array>
+    <string-array name="guojiashipinyaopinjianduguanlizongju_code">
+        <item>84503</item>
+    </string-array>
+    <string-array name="guojiacehuiju_code">
+        <item>86001</item>
+    </string-array>
+    <string-array name="guojiazhongyiyaoguanliju_code">
+        <item>84502</item>
+    </string-array>
+    <string-array name="guowuyuanbangongting_code">
+        <item>80202</item>
+    </string-array>
+    <string-array name="zhongguogongchengwuliyanjiuyuan_code">
+        <item>82817</item>
+    </string-array>
+    <string-array name="zhongguoshehuikexueyuan_code">
+        <item>80201</item>
+    </string-array>
+    <string-array name="zhongguoshiyouhuagongjituangongsi_code">
+        <item>83501</item>
+        <item>86301</item>
+    </string-array>
+    <string-array name="zhongguoshiyoutianranqijituangongsi_code">
+        <item>83401</item>
+    </string-array>
+    <string-array name="guojiadianwanggongsi_code">
+        <item>82302</item>
+        <item>82303</item>
+    </string-array>
+    <string-array name="zhongguodianzikejijituangongsi_code">
+        <item>83000</item>
+        <item>83002</item>
+        <item>83003</item>
+        <item>83004</item>
+        <item>83010</item>
+        <item>83005</item>
+        <item>83006</item>
+        <item>83007</item>
+        <item>83008</item>
+        <item>83009</item>
+        <item>83011</item>
+    </string-array>
+    <string-array name="zhongguodianzixinxichanyejituanyouxiangongsi_code">
+        <item>83001</item>
+    </string-array>
+    <string-array name="datangdianxinkejichanyejituan_code">
+        <item>84001</item>
+        <item>84002</item>
+        <item>84003</item>
+        <item>84004</item>
+    </string-array>
+    <string-array name="wuhanyoudiankexueyanjiuyuan_code">
+        <item>84011</item>
+    </string-array>
+    <string-array name="zhongguoyiyaojituanzonggongsi_code">
+        <item>84504</item>
+        <item>84505</item>
+        <item>84506</item>
+        <item>84507</item>
+        <item>84509</item>
+        <item>85901</item>
+    </string-array>
+    <string-array name="zhongguozhonggangjituangongsi_code">
+        <item>82604</item>
+        <item>82606</item>
+        <item>82608</item>
+        <item>82609</item>
+    </string-array>
+    <string-array name="zhongguomeitankegongjituan_code">
+        <item>83301</item>
+    </string-array>
+    <string-array name="jixiekexueyanjiuyuan_code">
+        <item>82701</item>
+        <item>82702</item>
+        <item>82703</item>
+        <item>82705</item>
+        <item>82706</item>
+        <item>82708</item>
+        <item>82709</item>
+    </string-array>
+    <string-array name="dangxiao_code">
+        <item>80000</item>
+        <item>89611</item>
+        <item>89621</item>
+        <item>89622</item>
+        <item>89623</item>
+        <item>89631</item>
+        <item>89632</item>
+        <item>89633</item>
+        <item>89637</item>
+        <item>89642</item>
+        <item>89643</item>
+        <item>89644</item>
+        <item>89651</item>
+        <item>89661</item>
+        <item>89650</item>
+    </string-array>
+    <string-array name="jiefangjun_code">
+        <item>90013</item>
+        <item>90016</item>
+        <item>90019</item>
+        <item>90001</item>
+        <item>90018</item>
+        <item>90020</item>
+        <item>90023</item>
+        <item>90024</item>
+        <item>90033</item>
+        <item>90034</item>
+        <item>90044</item>
+        <item>90101</item>
+        <item>90105</item>
+        <item>90106</item>
+        <item>90107</item>
+        <item>90109</item>
+        <item>90110</item>
+        <item>90111</item>
+        <item>90114</item>
+        <item>90115</item>
+        <item>90041</item>
+        <item>90068</item>
+        <item>90048</item>
+        <item>90003</item>
+        <item>90035</item>
+        <item>90060</item>
+        <item>90005</item>
+        <item>90008</item>
+        <item>90015</item>
+        <item>90009</item>
+        <item>90028</item>
+        <item>90038</item>
+        <item>90047</item>
+        <item>90058</item>
+        <item>90002</item>
+        <item>90046</item>
+        <item>90004</item>
+        <item>90006</item>
+        <item>90007</item>
+        <item>90017</item>
+        <item>90021</item>
+        <item>90037</item>
+        <item>90049</item>
+        <item>90073</item>
+        <item>90102</item>
+        <item>90040</item>
+        <item>90039</item>
+        <item>90042</item>
+        <item>90011</item>
+        <item>90022</item>
+        <item>90032</item>
+        <item>90045</item>
+        <item>90059</item>
+        <item>90112</item>
+        <item>90202</item>
+        <item>90030</item>
+        <item>90103</item>
+        <item>90113</item>
+        <item>90027</item>
+        <item>90201</item>
+        <item>90203</item>
+        <item>90010</item>
+        <item>90025</item>
+        <item>90031</item>
+    </string-array>
+    <string-array name="zhongguohegongyejituangongsi_code">
+        <item>82801</item>
+        <item>82802</item>
+        <item>82803</item>
+        <item>82804</item>
+        <item>82806</item>
+        <item>82807</item>
+        <item>82809</item>
+        <item>82808</item>
+    </string-array>
+    <string-array name="guojiahedianjishuyouxiangongsi_code">
+        <item>82717</item>
+        <item>82805</item>
+    </string-array>
+    <string-array name="zhongguochuanbozhonggongjituan_code">
+        <item>86219</item>
+        <item>86207</item>
+        <item>86208</item>
+        <item>86209</item>
+        <item>86217</item>
+        <item>86212</item>
+        <item>86210</item>
+        <item>86211</item>
+        <item>86213</item>
+        <item>86214</item>
+        <item>86215</item>
+        <item>86216</item>
+        <item>86205</item>
+        <item>86201</item>
+        <item>86202</item>
+        <item>86203</item>
+        <item>86204</item>
+        <item>86218</item>
+        <item>86220</item>
+        <item>86221</item>
+        <item>86222</item>
+        <item>86223</item>
+        <item>86224</item>
+    </string-array>
+    <string-array name="zhongguochuanbogongyejituan_code">
+        <item>86206</item>
+    </string-array>
+    <string-array name="zhongguohuanengjituan_code">
+        <item>82304</item>
+    </string-array>
+    <string-array name="zhongguojianzhukexueyanjiuyuan_code">
+        <item>82401</item>
+    </string-array>
+    <string-array name="zhongguojianshekejijituan_code">
+        <item>82403</item>
+    </string-array>
+    <string-array name="zhongguoyejinkegongjituan_code">
+        <item>82602</item>
+    </string-array>
+    <string-array name="zhongguogangyankejijituan_code">
+        <item>82601</item>
+        <item>82605</item>
+    </string-array>
+    <string-array name="zhongguojixiegongyejituan_code">
+        <item>82715</item>
+    </string-array>
+    <string-array name="zhongguozhonghuajituan_code">
+        <item>83503</item>
+        <item>83504</item>
+    </string-array>
+    <string-array name="zhongguoqinggongjituan_code">
+        <item>83704</item>
+        <item>83705</item>
+        <item>83706</item>
+    </string-array>
+    <string-array name="zhongguohangkonggongyejituangongsi_code">
+        <item>82902</item>
+        <item>82903</item>
+        <item>82904</item>
+        <item>82905</item>
+        <item>82906</item>
+        <item>82907</item>
+        <item>82908</item>
+        <item>82909</item>
+        <item>82910</item>
+        <item>82911</item>
+        <item>82912</item>
+        <item>82913</item>
+        <item>82914</item>
+        <item>82920</item>
+        <item>82925</item>
+        <item>82927</item>
+        <item>82928</item>
+        <item>82929</item>
+        <item>82931</item>
+        <item>82932</item>
+        <item>82936</item>
+        <item>82937</item>
+        <item>82938</item>
+        <item>82961</item>
+    </string-array>
+    <string-array name="zhongguobingqizhuangbeijituangongsi_code">
+        <item>83114</item>
+        <item>83116</item>
+    </string-array>
+    <string-array name="zhongguobingqigongyejituangongsi_code">
+        <item>83101</item>
+        <item>83102</item>
+        <item>83103</item>
+        <item>83104</item>
+        <item>83105</item>
+        <item>83106</item>
+        <item>83107</item>
+        <item>83109</item>
+        <item>83110</item>
+        <item>83111</item>
+        <item>83112</item>
+        <item>83113</item>
+        <item>83115</item>
+    </string-array>
+    <string-array name="zhongguohangtiankejijituangongsi_code">
+        <item>83201</item>
+        <item>83232</item>
+        <item>83233</item>
+        <item>83256</item>
+        <item>83258</item>
+        <item>83266</item>
+        <item>83271</item>
+        <item>83278</item>
+        <item>83285</item>
+        <item>83276</item>
+        <item>83277</item>
+    </string-array>
+    <string-array name="zhongguohangtiankegongjituan_code">
+        <item>83286</item>
+        <item>83221</item>
+        <item>83241</item>
+        <item>83245</item>
+        <item>83246</item>
+        <item>83269</item>
+    </string-array>
+    <string-array name="zhongguojiancaijituan_code">
+        <item>84901</item>
+    </string-array>
+    <!-- <string-array name="zhongguoyiyaojituan_code"> -->
+    <!-- <item>85901</item> -->
+    <!-- <item>85902</item> -->
+    <!-- </string-array> -->
+    <string-array name="zhongguowukuangjituan_code">
+        <item>86404</item>
+        <item>82603</item>
+    </string-array>
+    <string-array name="beijingyousejinshuyanjiuzongyuan_code">
+        <item>86403</item>
+    </string-array>
+    <string-array name="zhongguoyousekuangyejituan_code">
+        <item>86402</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/photo_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:visibility="visible" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/photo"
+            android:textSize="@dimen/title_text_size" />
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/default_photo" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/photo_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text="@string/user_name"
+                android:textSize="@dimen/title_text_size" />
+
+            <EditText
+                android:id="@+id/nick_input"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@+id/username"
+                android:background="@null"
+                android:hint="@string/username_input"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#f18e10" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:id="@+id/gender_tip"
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/gender"
+                android:textSize="@dimen/title_text_size" />
+
+            <TextView
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@+id/gender_tip"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/male_select"
+                android:gravity="center_vertical"
+                android:text="@string/boy"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/title_text_size" />
+
+            <TextView
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/male"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/female_default"
+                android:gravity="center_vertical"
+                android:text="@string/girl"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/title_text_size" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#f18e10" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp" >
+
+            <TextView
+                android:id="@+id/hometown"
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text="@string/hometown"
+                android:textSize="@dimen/title_text_size" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@+id/hometown"
+                android:orientation="vertical" >
+
+                <Spinner
+                    android:id="@+id/province"
+                    android:layout_width="fill_parent"
+                    android:layout_height="47dp"
+                    android:layout_marginTop="3dp"
+                    android:scrollbars="none" />
+
+                <Spinner
+                    android:id="@+id/cities"
+                    android:layout_width="fill_parent"
+                    android:layout_height="47dp"
+                    android:layout_marginTop="3dp"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

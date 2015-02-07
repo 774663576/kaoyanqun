@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="5dip" >
+
+    <!-- <HorizontalScrollView -->
+    <!-- android:id="@+id/horizontalScrollView1" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:scrollbars="none" > -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/category_selector"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="34所"
+            android:textColor="@color/title_text_color"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_211"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/category_selector"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="211"
+            android:textColor="@color/title_text_color"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_985"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/category_selector"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="985"
+            android:textColor="@color/title_text_color"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_yanjiushengyuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/category_selector"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="研究生院"
+            android:textColor="@color/title_text_color"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_zhongkeyuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/category_selector"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="中科院"
+            android:textColor="@color/title_text_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <!-- </HorizontalScrollView> -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="2dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/bg_edittext_round_2" >
+
+        <TextView
+            android:id="@+id/ic_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_select_course_select_img" />
+
+        <EditText
+            android:id="@+id/university_search"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/ic_search"
+            android:background="@null"
+            android:hint="@string/input_university_tip"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dip"
+        android:background="@drawable/record_bg"
+        android:childDivider="@color/bg_color"
+        android:divider="@color/bg_color"
+        android:dividerHeight="0.5dip" >
+    </ExpandableListView>
+
+    <ListView
+        android:id="@+id/search_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dip"
+        android:background="@drawable/record_bg"
+        android:visibility="gone" >
+    </ListView>
+
+</LinearLayout>

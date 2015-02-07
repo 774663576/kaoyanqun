@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="arr_zhongkeyuan">
+        <item>中国科学院大学</item>
+    </string-array>
+    <string-array name="arr_zhongkeyuan_code">
+        <item>10000</item>
+    </string-array>
+
+</resources>

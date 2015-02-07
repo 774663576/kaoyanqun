@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="30dip"
+    android:paddingRight="30dip" >
+
+    <com.edu.kygroup.widget.CircularImage
+        android:id="@+id/img_avatar"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dip"
+        android:src="@drawable/default_round_head" />
+
+    <EditText
+        android:id="@+id/edit_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_below="@+id/img_avatar"
+        android:layout_marginTop="30dip"
+        android:background="@null"
+        android:drawableLeft="@drawable/ic_tip_username"
+        android:drawablePadding="20dip"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="用户名"
+        android:textSize="18sp" >
+    </EditText>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/edit_user_name"
+        android:background="#707070" >
+    </View>
+
+    <LinearLayout
+        android:id="@+id/layout_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="30dip" >
+
+        <TextView
+            android:id="@+id/txt_user_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:background="@null"
+            android:drawableLeft="@drawable/profile_action_follow_icon"
+            android:drawablePadding="20dip"
+            android:gravity="center_vertical"
+            android:text="男"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableRight="@drawable/arrow_down_1"
+            android:gravity="center_vertical"
+            android:textSize="18sp" >
+        </TextView>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/layout_sex"
+        android:background="#707070" >
+    </View>
+
+    <LinearLayout
+        android:id="@+id/layout_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line2"
+        android:layout_marginTop="30dip"
+        android:gravity="bottom" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:background="@null"
+            android:drawableLeft="@drawable/home_tabbar_normal"
+            android:drawablePadding="20dip"
+            android:gravity="center_vertical"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/sheng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableRight="@drawable/arrow_down_1"
+            android:gravity="center_vertical"
+            android:paddingRight="15dip"
+            android:text="北京"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/shi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableRight="@drawable/arrow_down_1"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:text="北京"
+            android:textSize="18sp" >
+        </TextView>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/layout_city"
+        android:background="#707070" >
+    </View>
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_below="@+id/line3"
+        android:layout_marginLeft="25dip"
+        android:layout_marginRight="25dip"
+        android:layout_marginTop="30dip"
+        android:background="@drawable/login_btn_selector"
+        android:text="完成"
+        android:textColor="#707070"
+        android:textSize="16sp" />
+
+</RelativeLayout>

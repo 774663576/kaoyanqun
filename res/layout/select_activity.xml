@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <LinearLayout
+        android:id="@+id/input_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_margin="10dip"
+            android:background="@drawable/bg_edittext_round_2" >
+
+            <TextView
+                android:id="@+id/ic_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_select_course_select_img" />
+
+            <EditText
+                android:id="@+id/university_search"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/ic_search"
+                android:background="@null"
+                android:hint="@string/input_university_tip"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/input_tip"
+        android:background="#d5d5d5" />
+
+    <RelativeLayout
+        android:id="@+id/tip"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/line"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:id="@+id/icon_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/ic_failed_small" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/select_tip"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/icon_tip"
+            android:text="@string/u_tip"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/university_tip_size" >
+        </TextView>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/universities"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tip"
+        android:layout_below="@+id/tip"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:divider="@color/bg_color"
+        android:dividerHeight="0.5dip"
+        android:listSelector="#00000000"
+        android:scrollbars="none" >
+    </ListView>
+
+    <ExpandableListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tip"
+        android:layout_margin="6dip"
+        android:background="@drawable/record_bg"
+        android:childDivider="@color/bg_color"
+        android:divider="@color/bg_color"
+        android:dividerHeight="0.5dip" >
+    </ExpandableListView>
+
+</RelativeLayout>

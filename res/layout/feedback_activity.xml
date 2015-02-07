@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <com.edu.kygroup.widget.CircularImage
+        android:id="@+id/imageView1"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="30dip"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dip"
+        android:layout_marginTop="25dip"
+        android:layout_toRightOf="@+id/imageView1"
+        android:background="@drawable/chatfrom_bg"
+        android:paddingBottom="8dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="8dip"
+        android:paddingTop="8dip"
+        android:text="用你独特的视角，给我们以新的启迪；用我们真诚的态度，给您更好的体验。" />
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="30dip" >
+
+        <com.edu.kygroup.widget.CircularImage
+            android:id="@+id/img_avatar"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="30dip"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/txt_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:layout_marginTop="25dip"
+            android:layout_toLeftOf="@+id/img_avatar"
+            android:background="@drawable/chatto_bg"
+            android:paddingBottom="8dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="8dip"
+            android:paddingTop="8dip"
+            android:text="用你独特的视角，给我们以新的启迪；用我们真诚的态度，给您更好的体验。" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dip" >
+
+        <EditText
+            android:id="@+id/edit_content"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/input_bar_bg_active"
+            android:hint="反馈内容"
+            android:maxLines="3" />
+
+        <Button
+            android:id="@+id/feedback_commit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/btn_14c1c7"
+            android:gravity="center"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:text="@string/txt_commit"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

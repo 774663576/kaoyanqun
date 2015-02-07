@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingLeft="30dip"
+        android:drawableRight="@drawable/arrow_down"
+        android:paddingRight="30dip"
+        android:paddingTop="8dip"
+        android:text="大学"
+       android:textColor="@color/title_text_color"
+        android:textSize="16sp" />
+
+</LinearLayout>

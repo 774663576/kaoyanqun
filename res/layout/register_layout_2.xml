@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/txt_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/edit_code"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_below="@+id/txt_show"
+        android:layout_marginTop="20dip"
+        android:background="@null"
+        android:drawableLeft="@drawable/ic_tip_pwd"
+        android:drawablePadding="5dip"
+        android:hint="请输入验证码"
+        android:textSize="14sp" >
+    </EditText>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/edit_code"
+        android:background="#707070" >
+    </View>
+
+    <Button
+        android:id="@+id/btn_getCode"
+        android:layout_width="wrap_content"
+        android:layout_height="30dip"
+        android:layout_alignBottom="@+id/edit_code"
+        android:layout_alignRight="@+id/edit_code"
+        android:layout_marginBottom="5dip"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:padding="5dip"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_below="@+id/line1"
+        android:layout_marginLeft="25dip"
+        android:layout_marginRight="25dip"
+        android:layout_marginTop="30dip"
+        android:background="@drawable/login_btn_selector"
+        android:text="下一步"
+        android:textColor="#707070"
+        android:textSize="16sp" />
+
+</RelativeLayout>

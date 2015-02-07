@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="30dip"
+    android:paddingRight="30dip"
+    android:paddingTop="40dip" >
+
+    <EditText
+        android:id="@+id/edit_num"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@null"
+        android:drawableLeft="@drawable/ic_tip_mobile"
+        android:drawablePadding="5dip"
+        android:hint="请输入手机号"
+        android:inputType="number"
+        android:textSize="14sp" >
+    </EditText>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/edit_num"
+        android:background="#707070" >
+    </View>
+
+    <EditText
+        android:id="@+id/edit_psw"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="20dip"
+        android:background="@null"
+        android:drawableLeft="@drawable/ic_tip_pwd"
+        android:drawablePadding="5dip"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:textSize="14sp" >
+    </EditText>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/edit_psw"
+        android:background="#707070" >
+    </View>
+
+    <TextView
+        android:id="@+id/txt_yanjiushegn_regisiter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/line2"
+        android:layout_below="@+id/line2"
+        android:layout_marginTop="20dp"
+        android:padding="5dip"
+        android:text="研究生注册"
+        android:textColor="#707070" />
+
+    <TextView
+        android:id="@+id/txt_kaosheng_regisiter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_yanjiushegn_regisiter"
+        android:layout_alignBottom="@+id/txt_yanjiushegn_regisiter"
+        android:layout_alignRight="@+id/line2"
+        android:padding="5dip"
+        android:text="考生注册"
+        android:textColor="#707070" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="25dip"
+        android:layout_marginRight="25dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/login_btn_selector"
+        android:text="登陆"
+        android:textColor="#707070"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txt_forgot_psw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:text="忘记密码"
+        android:textColor="#707070" />
+
+</RelativeLayout>

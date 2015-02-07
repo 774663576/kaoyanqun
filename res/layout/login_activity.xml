@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <LinearLayout
+        android:id="@+id/reg_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/graduate"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/regisiter_selector"
+            android:gravity="center"
+            android:text="@string/register_graduate"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/login_btn_size" />
+
+        <RelativeLayout
+            android:layout_width="1dp"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="11dp"
+                android:layout_marginTop="11dp"
+                android:background="#666666" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/students"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/regisiter_selector"
+            android:gravity="center"
+            android:text="@string/register_student"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/login_btn_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/input_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reg_layout"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/im_login_frame"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/login_name"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableLeft="@drawable/im_headpic"
+            android:drawablePadding="9dp"
+            android:hint="@string/mail_input"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#d4d4d4" />
+        <!-- android:digits="@string/char_input" -->
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableLeft="@drawable/im_lock"
+            android:drawablePadding="9dp"
+            android:hint="@string/pwd_input"
+            android:inputType="textPassword"
+            android:maxLength="50"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#d4d4d4" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/input_layout"
+        android:layout_alignRight="@+id/input_layout"
+        android:layout_centerVertical="true"
+        android:background="@drawable/login_btn_selector"
+        android:text="@string/login"
+        android:textColor="@color/green_title"
+        android:textSize="@dimen/login_btn_size" />
+
+    <TextView
+        android:id="@+id/forget_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/login_btn"
+        android:layout_below="@+id/login_btn"
+        android:layout_marginTop="78dp"
+        android:text="@string/forget_pwd"
+        android:textColor="@color/title_text_color" />
+
+</RelativeLayout>

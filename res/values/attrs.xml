@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 主菜单 标题数组 -->
+    <string-array name="array_main_menu">
+        <item name="我的报考"/>
+        <item name="我的资料"/>
+        <item name="研友"/>
+        <item name="私信"/>
+        <item name="设置"/>
+        <item name="推荐给好友"/>
+    </string-array>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+</resources>

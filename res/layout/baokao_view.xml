@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/aim_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/per_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip"
+                android:text="@string/aim_university"
+                android:textColor="#028818" />
+
+            <TextView
+                android:id="@+id/baokao_msg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/star"
+                android:drawablePadding="5dip"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="5dip"
+                android:text="2014"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/major_detail"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dip"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/detail"
+                android:drawablePadding="5dip"
+                android:drawableRight="@drawable/ic_common_arrow_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="@string/major_detail"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/txt_bbs"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dip"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/bbs"
+                android:drawablePadding="5dip"
+                android:drawableRight="@drawable/ic_common_arrow_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="BBS / 考研论坛"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/txt_chat"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="1dip"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/group_chat_img"
+                android:drawablePadding="5dip"
+                android:drawableRight="@drawable/ic_common_arrow_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="考研群"
+                android:textSize="17sp" />
+
+            <RelativeLayout
+                android:id="@+id/friends_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dip"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:focusable="false"
+                    android:src="@drawable/ic_common_arrow_right" />
+
+                <TextView
+                    android:id="@+id/friends"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/friends"
+                    android:drawablePadding="5dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="5dip"
+                    android:text="@string/search_post_graduate"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/postfriend_load"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/friends"
+                    android:layout_marginTop="5dip"
+                    android:paddingLeft="10dip"
+                    android:text="@string/post_friends_loading"
+                    android:textColor="#666666"
+                    android:textSize="17sp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontal_scrollview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/postfriend_load"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dip"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:id="@+id/scroll_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/per_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:padding="5dip"
+                android:text="@string/focus_uni"
+                android:textColor="#028818" />
+
+            <com.edu.kygroup.widget.KyListView
+                android:id="@+id/listView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/bg_color"
+                android:dividerHeight="1dip" />
+
+            <LinearLayout
+                android:id="@+id/add_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/add_focus" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/add_focus"
+                    android:textColor="#bbbbbb"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_kefu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:visibility="gone" >
+
+        <!-- com.edu.kygroup.widget.CircularImage -->
+
+        <com.edu.kygroup.widget.CircularImage
+            android:id="@+id/imageView1"
+            android:layout_width="55dip"
+            android:layout_height="55dip"
+            android:layout_marginLeft="5dip"
+            android:src="@drawable/yanshixiong" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="研师兄"
+            android:textColor="#5a5a5a"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dip"
+            android:background="#5AC64F"
+            android:paddingLeft="6dip"
+            android:paddingRight="6dip"
+            android:text="官方"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/layout_kefu"
+        android:background="#cdcdcd" />
+
+    <com.edu.pullrefresh.PullToRefreshListView
+        android:id="@+id/search_result_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/line"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/bg_color"
+        android:dividerHeight="@dimen/width_line"
+        android:gravity="center"
+        android:listSelector="#00000000"
+        android:scrollbars="none" >
+    </com.edu.pullrefresh.PullToRefreshListView>
+
+    <LinearLayout
+        android:id="@+id/search_loadmore_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="false"
+        android:visibility="gone" >
+
+        <include layout="@layout/common_loadmore_layout" />
+    </LinearLayout>
+
+</RelativeLayout>

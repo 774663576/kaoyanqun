@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/select_pic_pop_btn_cancel_selector"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/btn_menu"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@null"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#0079ff"
+        android:textSize="18sp" />
+
+</LinearLayout>

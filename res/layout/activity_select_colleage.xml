@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <ExpandableListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dip"
+        android:background="@drawable/record_bg" >
+    </ExpandableListView>
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/schoolName" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:gravity="center" -->
+    <!-- android:padding="10dip" -->
+    <!-- android:textSize="20sp" /> -->
+
+</RelativeLayout>
