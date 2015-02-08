@@ -181,6 +181,9 @@ public class LoginActivity extends BaseActivity implements OnClickListener,
 					ToastUtils.showShortToast(ErrorUtils.getErrorMsg(info
 							.getResult()));
 				}
+			} else {
+				closeWaitingDialog();
+				ToastUtils.showShortToast("登陆失败");
 			}
 			break;
 		case TagUtils.LOSE_PASSWORD: {

@@ -378,5 +378,7 @@
     <string name="title_activity_personal_msg_activity1">PersonalMsgActivity1</string>
     <string name="title_activity_find_password">FindPasswordActivity</string>
     <string name="title_activity_yanyou">YanyouActivity</string>
+    <string name="title_activity_task">TaskActivity</string>
+    <string name="title_activity_publish_task">PublishTaskActivity</string>
 
 </resources>

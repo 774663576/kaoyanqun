@@ -78,8 +78,8 @@ public class BaokaoView implements IBindData, OnClickListener,
 	private LinearLayout add_layout;
 	private ScrollView mScrollView;
 	private TextView major_detail;
-	private TextView txt_bbs;
-	private TextView txt_chat;
+//	private TextView txt_bbs;
+//	private TextView txt_chat;
 	private RelativeLayout friend_layout;
 	private HorizontalScrollView scrollView;
 
@@ -114,10 +114,10 @@ public class BaokaoView implements IBindData, OnClickListener,
 		friend_layout = (RelativeLayout) mView
 				.findViewById(R.id.friends_layout);
 		friend_layout.setOnClickListener(this);
-		txt_bbs = (TextView) mView.findViewById(R.id.txt_bbs);
-		txt_chat = (TextView) mView.findViewById(R.id.txt_chat);
-		txt_bbs.setOnClickListener(this);
-		txt_chat.setOnClickListener(this);
+//		txt_bbs = (TextView) mView.findViewById(R.id.txt_bbs);
+//		txt_chat = (TextView) mView.findViewById(R.id.txt_chat);
+//		txt_bbs.setOnClickListener(this);
+//		txt_chat.setOnClickListener(this);
 		major_detail = (TextView) mView.findViewById(R.id.major_detail);
 		major_detail.setOnClickListener(this);
 		add_layout = (LinearLayout) mView.findViewById(R.id.add_layout);
@@ -349,9 +349,10 @@ public class BaokaoView implements IBindData, OnClickListener,
 
 		case TagUtils.GET_CONCERN: {
 			if (null != obj) {
+				mContext.closeWaitingDialog();
 				ArrayList<FocusInfo> infos = (ArrayList<FocusInfo>) obj;
 				if (null != infos && infos.size() > 0) {
-
+					mFocusInfos.clear();
 					mFocusInfos.addAll(infos);
 					adapter.notifyDataSetChanged();
 					writeFocus(mFocusInfos);
@@ -365,10 +366,11 @@ public class BaokaoView implements IBindData, OnClickListener,
 				Boolean result = (Boolean) obj;
 				if (result) {
 					// createFocusLayout(mInfo);
-					mFocusInfos.add(mInfo);
-					adapter.notifyDataSetChanged();
-					mContext.closeWaitingDialog();
-					writeFocus(mFocusInfos);
+					// mFocusInfos.add(mInfo);
+					// adapter.notifyDataSetChanged();
+					// mContext.closeWaitingDialog();
+					// writeFocus(mFocusInfos);
+					getConcern();
 					return null;
 				}
 			}
@@ -542,20 +544,20 @@ public class BaokaoView implements IBindData, OnClickListener,
 			new NetworkTask().execute(this, TagUtils.DETAILS_TAG, url);
 			break;
 		}
-		case R.id.txt_bbs:
-			FocusInfo info = new FocusInfo();
-			info.setmSid(mUser.getRSid());
-			info.setmCid(mUser.getRCid());
-			info.setmMid(mUser.getRmid());
-			info.setmFocusSchool(mUser.getRSchool());
-			info.setmFocusColleage(mUser.getRCollege());
-			info.setmFocusMajor(mUser.getRMajor());
-			goToBbsActivity(info);
-			break;
+		// case R.id.txt_bbs:
+		// FocusInfo info = new FocusInfo();
+		// info.setmSid(mUser.getRSid());
+		// info.setmCid(mUser.getRCid());
+		// info.setmMid(mUser.getRmid());
+		// info.setmFocusSchool(mUser.getRSchool());
+		// info.setmFocusColleage(mUser.getRCollege());
+		// info.setmFocusMajor(mUser.getRMajor());
+		// goToBbsActivity(info);
+		// break;
 
 		case R.id.focus_msg: {
 			mContext.startWaitingDialog();
-			info = (FocusInfo) v.getTag();
+			FocusInfo info = (FocusInfo) v.getTag();
 			System.out.println("info:::::::::::" + info);
 			String url = UrlUtils.DETAILS_URL + "major.sid=" + info.getmSid()
 					+ "&major.ceid=" + info.getmCid() + "&major.mid="
@@ -631,15 +633,15 @@ public class BaokaoView implements IBindData, OnClickListener,
 					});
 		if (null != mFocusInfos && mFocusInfos.size() > 0) {
 			if (mUser.getRole() != 1) {
-				// builder.setNegativeButton(R.string.dia_change_aim,
-				// new DialogInterface.OnClickListener() {
-				// @Override
-				// public void onClick(DialogInterface dialog,
-				// int which) {
-				// // TODO Auto-generated method stub
-				// showChangeAimDialog();
-				// }
-				// });
+				builder.setNegativeButton(R.string.dia_change_aim,
+						new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+								// TODO Auto-generated method stub
+								showChangeAimDialog();
+							}
+						});
 			}
 			builder.setNeutralButton(R.string.dia_delete_focus,
 					new DialogInterface.OnClickListener() {

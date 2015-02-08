@@ -58,35 +58,52 @@
                 android:text="@string/major_detail"
                 android:textSize="17sp" />
 
-            <TextView
-                android:id="@+id/txt_bbs"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="1dip"
-                android:background="@color/white"
-                android:drawableLeft="@drawable/bbs"
-                android:drawablePadding="5dip"
-                android:drawableRight="@drawable/ic_common_arrow_right"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dip"
-                android:paddingRight="10dip"
-                android:text="BBS / 考研论坛"
-                android:textSize="17sp" />
+            <!-- <TextView -->
+            <!-- android:id="@+id/txt_task" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="45dip" -->
+            <!-- android:layout_marginTop="1dip" -->
+            <!-- android:background="@color/white" -->
+            <!-- android:drawableLeft="@drawable/task" -->
+            <!-- android:drawablePadding="5dip" -->
+            <!-- android:drawableRight="@drawable/ic_common_arrow_right" -->
+            <!-- android:gravity="center_vertical" -->
+            <!-- android:paddingLeft="10dip" -->
+            <!-- android:paddingRight="10dip" -->
+            <!-- android:text="任务" -->
+            <!-- android:textSize="17sp" /> -->
 
-            <TextView
-                android:id="@+id/txt_chat"
-                android:layout_width="match_parent"
-                android:layout_height="45dip"
-                android:layout_marginTop="1dip"
-                android:background="@color/white"
-                android:drawableLeft="@drawable/group_chat_img"
-                android:drawablePadding="5dip"
-                android:drawableRight="@drawable/ic_common_arrow_right"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dip"
-                android:paddingRight="10dip"
-                android:text="考研群"
-                android:textSize="17sp" />
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/txt_bbs" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="45dp" -->
+            <!-- android:layout_marginTop="1dip" -->
+            <!-- android:background="@color/white" -->
+            <!-- android:drawableLeft="@drawable/bbs" -->
+            <!-- android:drawablePadding="5dip" -->
+            <!-- android:drawableRight="@drawable/ic_common_arrow_right" -->
+            <!-- android:gravity="center_vertical" -->
+            <!-- android:paddingLeft="10dip" -->
+            <!-- android:paddingRight="10dip" -->
+            <!-- android:text="BBS / 考研论坛" -->
+            <!-- android:textSize="17sp" /> -->
+
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/txt_chat" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="45dip" -->
+            <!-- android:layout_marginTop="1dip" -->
+            <!-- android:background="@color/white" -->
+            <!-- android:drawableLeft="@drawable/group_chat_img" -->
+            <!-- android:drawablePadding="5dip" -->
+            <!-- android:drawableRight="@drawable/ic_common_arrow_right" -->
+            <!-- android:gravity="center_vertical" -->
+            <!-- android:paddingLeft="10dip" -->
+            <!-- android:paddingRight="10dip" -->
+            <!-- android:text="考研群" -->
+            <!-- android:textSize="17sp" /> -->
 
             <RelativeLayout
                 android:id="@+id/friends_layout"

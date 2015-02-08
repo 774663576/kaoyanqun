@@ -2,14 +2,14 @@ package com.edu.kygroup.net;
 
 import org.json.JSONObject;
 
-import android.util.Log;
-
 import com.alibaba.fastjson.JSON;
 import com.edu.kygroup.domin.LoginInfo;
+import com.edu.kygroup.domin.PersonInfo;
+import com.edu.kygroup.domin.Register;
+
 /*
  * 登录与注册相关的解析类
  */
-import com.edu.kygroup.domin.Register;
 
 public class LoginParse {
 	public final static String TAG = "http";
@@ -53,6 +53,24 @@ public class LoginParse {
 
 	public Object login(String url) {
 		String result = mHttpAgent.httpPost(url);
+		if (result == null || "".equals(result)) {
+			return null;
+		}
+		PersonInfo pInfo = new PersonInfo();
+		// try {
+		// JSONObject obj = new JSONObject(result);
+		// String res = obj.getString("result");
+		// if (!"200".equals(res)) {
+		// return null;
+		// }
+		// JSONObject info = obj.optJSONObject("personinfo");
+		// pInfo.setCname(info.getString("cname"));
+		//
+		// } catch (JSONException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// }
+		System.out.println("result:::::::::::" + result);
 		LoginInfo info = (LoginInfo) JSON.parseObject(result, LoginInfo.class);
 		return info;
 	}

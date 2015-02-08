@@ -4,7 +4,7 @@ public class UrlUtils {
 	// http://www.yifulou.cn:8080/exam/detail?user.email=619123696@qq.com
 	// public final static String BASE_URL = "http://192.168.1.101:8080";
 	// private final static String BASE_URL = "http://116.255.238.45:20178";
-	// private final static String BASE_URL = "http://155.28.155.255:8080";
+	// public final static String BASE_URL = "http://192.168.1.105:8080";
 	public final static String BASE_URL = "http://www.yifulou.cn:8180";
 	public final static String REGISTER_URL = BASE_URL
 			+ "/exam/register.action?";
