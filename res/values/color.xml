@@ -92,5 +92,7 @@
     <color name="grid_state_focused">#80000000</color>
     <color name="voip_interface_text_color">#bababa</color>
     <color name="black_deep">#FF000000</color>
+    <color name="text_color_select">#F86442</color>
+    <color name="text_color_nomal">#3F434C</color>
 
 </resources>

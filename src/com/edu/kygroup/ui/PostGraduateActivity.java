@@ -113,10 +113,10 @@ public class PostGraduateActivity extends BaseActivity implements IBindData,
 		mMajorUser = new ArrayList<User>();
 		mColleageUser = new ArrayList<User>();
 		mPostGraduateUser = new ArrayList<User>();
-		mPostAdapter = new UserAdapter(this, mPostUser);
-		mMajorAdapter = new UserAdapter(this, mMajorUser);
-		mColleageAdapter = new UserAdapter(this, mColleageUser);
-		mPostGraduateAdapter = new UserAdapter(this, mPostGraduateUser);
+		mPostAdapter = new UserAdapter(this, mPostUser, 1);
+		mMajorAdapter = new UserAdapter(this, mMajorUser, 0);
+		mColleageAdapter = new UserAdapter(this, mColleageUser, 0);
+		mPostGraduateAdapter = new UserAdapter(this, mPostGraduateUser, 1);
 		mPostListView.setAdapter(mPostAdapter);
 		if (mPostUser.size() > 0) {
 			mPostListView.setVisibility(View.VISIBLE);

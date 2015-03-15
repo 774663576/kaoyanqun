@@ -191,7 +191,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dip"
                     android:layout_below="@+id/layout_baokaoyuanxiao"
-                    android:layout_marginTop="1dip"
+                    android:layout_marginTop="10dip"
                     android:background="@color/white"
                     android:drawableLeft="@drawable/my_theme"
                     android:drawablePadding="5dip"
@@ -200,6 +200,22 @@
                     android:paddingLeft="15dip"
                     android:paddingRight="15dip"
                     android:text="主题"
+                    android:textColor="#394257"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_friend"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginTop="1dip"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/find_friend_img"
+                    android:drawablePadding="5dip"
+                    android:drawableRight="@drawable/ic_common_arrow_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:text="好友"
                     android:textColor="#394257"
                     android:textSize="16sp" />
 

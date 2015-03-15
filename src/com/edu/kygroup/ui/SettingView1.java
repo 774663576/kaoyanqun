@@ -62,7 +62,7 @@ public class SettingView1 implements OnClickListener, IBindData {
 	private TextView txt_bangzhu;
 	private TextView txt_tuichu;
 	private CircularImage img_avatar;
-	// private TextView txt_bangding;
+	private TextView txt_friend;
 	private LinearLayout layout_baokao;
 
 	private String sname = "";
@@ -99,6 +99,7 @@ public class SettingView1 implements OnClickListener, IBindData {
 	}
 
 	private void initView() {
+		txt_friend = (TextView) mView.findViewById(R.id.txt_friend);
 		txt_name = (TextView) mView.findViewById(R.id.txt_name);
 		txt_name.setText(KygroupApplication.mUser.getNickName());
 		layout_baokao = (LinearLayout) mView
@@ -135,6 +136,7 @@ public class SettingView1 implements OnClickListener, IBindData {
 	}
 
 	private void setListener() {
+		txt_friend.setOnClickListener(this);
 		txt_gerenxinxi.setOnClickListener(this);
 		layout_biyeyuanxiao.setOnClickListener(this);
 		// txt_gonggao.setOnClickListener(this);
@@ -197,6 +199,9 @@ public class SettingView1 implements OnClickListener, IBindData {
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
+		case R.id.txt_friend:
+			mContext.startActivity(new Intent(mContext, MyFriendsActivity.class));
+			break;
 		case R.id.txt_gerenxinxi:
 			mContext.startActivity(new Intent(mContext,
 					EditSelfInfoActivity.class));

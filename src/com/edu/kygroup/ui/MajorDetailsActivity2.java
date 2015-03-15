@@ -212,7 +212,7 @@ public class MajorDetailsActivity2 extends BaseActivity implements IBindData,
 		Intent intent = new Intent();
 		intent.putExtra("major", getIntent().getStringExtra("major"));
 		intent.putExtra("major_id", detail.getMid() + "");
-		intent.setClass(this, TiaoJiYuanXiaoActivity.class);
+		intent.setClass(this, TiaojiYuanxiao1Activity.class);
 		startActivity(intent);
 		Util.leftOutRightIn(this);
 	}

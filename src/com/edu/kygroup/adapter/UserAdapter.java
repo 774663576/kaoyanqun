@@ -27,12 +27,15 @@ public class UserAdapter extends BaseAdapter {
 	private ImageLoader mImageLoader;
 	private DisplayImageOptions mOptions;
 
-	public UserAdapter(Activity context, List<User> users) {
+	private int type = 1;// 表示研友
+
+	public UserAdapter(Activity context, List<User> users, int type) {
 		// TODO Auto-generated constructor stub
 		mContext = context;
 		mUsers = users;
 		mInflater = LayoutInflater.from(mContext);
 		initImageOptions();
+		this.type = type;
 	}
 
 	private void initImageOptions() {
@@ -99,7 +102,15 @@ public class UserAdapter extends BaseAdapter {
 			holder.mNickName.setText(user.getNickName());
 			String mESchool = StringUtils.isEmpty(user.getESchool()) ? getLocalUni()
 					: user.getESchool();
-			holder.mRYear.setText(user.getRYear() + "  " + user.getRSchool());
+			if (type == 1) {
+				holder.mRYear
+						.setText(user.getRYear() + "  " + user.getRMajor());
+
+			} else {
+				holder.mRYear.setText(user.getRYear() + "  "
+						+ user.getRSchool());
+
+			}
 			if (StringUtils.isEmpty(user.getEYear())
 					|| user.getEYear().equals("0")) {
 				holder.mEYear.setText(mESchool);

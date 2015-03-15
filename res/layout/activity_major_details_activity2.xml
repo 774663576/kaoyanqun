@@ -138,7 +138,7 @@
             android:layout_marginRight="10dip"
             android:drawablePadding="10dip"
             android:drawableRight="@drawable/arrow_right"
-            android:text="上一年本专业接收调剂的院校"
+            android:text="本专业接收调剂的院校"
             android:textColor="@color/zhushi_font_color"
             android:textSize="12sp" />
     </RelativeLayout>

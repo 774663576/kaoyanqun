@@ -64,7 +64,7 @@ public class FriendsView implements IBindData, OnItemClickListener {
 	private void initData() {
 		mUser = KygroupApplication.mUser;
 		mUsers = new ArrayList<User>();
-		mAdapter = new UserAdapter(mContext, mUsers);
+		mAdapter = new UserAdapter(mContext, mUsers, 0);
 		mListview.setAdapter(mAdapter);
 		mContext.startWaitingDialog();
 		mListview.setVisibility(View.GONE);

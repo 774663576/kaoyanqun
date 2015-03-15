@@ -10,7 +10,6 @@ import android.view.Window;
 import android.widget.TextView;
 
 import com.edu.kygroup.R;
-import com.edu.kygroup.domin.Register;
 import com.edu.kygroup.fragment.SelectObjectFragment;
 import com.edu.kygroup.fragment.SelectSchoolFragment;
 

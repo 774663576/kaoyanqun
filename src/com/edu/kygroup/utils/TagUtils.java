@@ -86,5 +86,6 @@ public class TagUtils {
 	public static final int DIZCUZ = 60;
 	public final static int GETDIRECTIONDETAIL = 61;
 	public final static int TIAOJIYUANXIAO = 62;
+	public final static int ADD_TASK = 63;
 
 }

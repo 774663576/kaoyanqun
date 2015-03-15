@@ -380,5 +380,8 @@
     <string name="title_activity_yanyou">YanyouActivity</string>
     <string name="title_activity_task">TaskActivity</string>
     <string name="title_activity_publish_task">PublishTaskActivity</string>
+    <string name="title_activity_my_friends">MyFriendsActivity</string>
+    <string name="title_activity_tiaoji_yuanxiao1">TiaojiYuanxiao1Activity</string>
+    <string name="title_activity_task_comment">TaskCommentActivity</string>
 
 </resources>

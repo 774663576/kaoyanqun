@@ -28,6 +28,7 @@ import android.widget.Toast;
 
 import com.edu.keygroup.chooseimage.RotateImageViewAware;
 import com.edu.keygroup.chooseimage.UniversalImageLoadTool;
+import com.edu.keygroup.selectshcool.ZhuanYe;
 import com.edu.kygroup.R;
 import com.edu.kygroup.domin.FocusInfo;
 import com.edu.kygroup.domin.TopicRetInfo;
@@ -35,6 +36,7 @@ import com.edu.kygroup.net.NetworkTask;
 import com.edu.kygroup.net.NetworkTask.GetFinish;
 import com.edu.kygroup.popupwindow.SelectPicPopwindow;
 import com.edu.kygroup.popupwindow.SelectPicPopwindow.CameraPath;
+import com.edu.kygroup.popupwindow.TaskZhuTiPopwindow;
 import com.edu.kygroup.utils.BitmapUtils;
 import com.edu.kygroup.utils.ConstantUtils;
 import com.edu.kygroup.utils.FileUtils;
@@ -101,6 +103,7 @@ public class PublicshBbsActivity extends BaseActivity implements
 	private void setListener() {
 		mGridView.setOnItemClickListener(this);
 		btnPublish.setOnClickListener(this);
+
 	}
 
 	@Override

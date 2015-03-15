@@ -8,9 +8,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import cn.sharesdk.framework.ShareSDK;
@@ -26,7 +25,7 @@ import com.edu.kygroup.iface.IBindData;
 import com.edu.kygroup.net.NetworkTask;
 import com.edu.kygroup.ui.BBSActivity1;
 import com.edu.kygroup.ui.KygroupApplication;
-import com.edu.kygroup.ui.ResponseActivity;
+import com.edu.kygroup.ui.PublicshBbsActivity;
 import com.edu.kygroup.utils.TagUtils;
 import com.edu.kygroup.utils.UrlUtils;
 
@@ -56,8 +55,10 @@ public class BBSFragment extends Fragment implements IBindData {
 	private PostersAdater mColleageAdapter;
 	private PostersAdater mSchoolAdapter;
 
+	private LinearLayout layout_tishi;
+
 	private User mUser;
-	private int mPostion = 2;
+	private int mPostion = 0;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -87,6 +88,17 @@ public class BBSFragment extends Fragment implements IBindData {
 		mPostListView.setCacheColorHint(0);
 		mMoreLayout = (LinearLayout) getView().findViewById(
 				R.id.search_loadmore_layout);
+		layout_tishi = (LinearLayout) getView().findViewById(R.id.tishi);
+		layout_tishi.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent();
+				intent.putExtra("focusInfo", mFocusInfo);
+				intent.setClass(getActivity(), PublicshBbsActivity.class);
+				startActivityForResult(intent, 100);
+			}
+		});
 
 	}
 

@@ -55,7 +55,7 @@ public class BlacklistActivity extends BaseActivity implements IBindData,
 		// mScrollListener = new ScrollListener();
 		// mBlackListView.setOnScrollListener(mScrollListener);
 		mBlackUsers = new ArrayList<User>();
-		mBlacklistAdapter = new UserAdapter(this, mBlackUsers);
+		mBlacklistAdapter = new UserAdapter(this, mBlackUsers, 0);
 		mBlackListView.setAdapter(mBlacklistAdapter);
 		mBlackListView.setOnItemClickListener(this);
 		mBlackListView.setVisibility(View.GONE);

@@ -69,7 +69,7 @@ public class HomeActivity extends BaseActivity implements OnClickListener,
 	private TextView mBaokao;
 	private TextView mPostFriends;
 	private TextView mMessage;
-	private TextView mFriends;
+	private TextView mTask;
 	private TextView mCurView;
 
 	private GraduateView mGraduateView;
@@ -77,6 +77,8 @@ public class HomeActivity extends BaseActivity implements OnClickListener,
 	private SettingView1 mSettingView;
 	private BaokaoView mBaokaoView;
 	private MessageView mMessageView;
+	private TaskView mTaskView;
+
 	private int index = 1;
 	private int mPos = 0;
 	private int mAlterId = R.drawable.baokao_default;
@@ -166,10 +168,10 @@ public class HomeActivity extends BaseActivity implements OnClickListener,
 		mBaokao = (TextView) findViewById(R.id.baokao);
 		mPostFriends = (TextView) findViewById(R.id.post_friends);
 		mMessage = (TextView) findViewById(R.id.message);
-		mFriends = (TextView) findViewById(R.id.friends);
+		mTask = (TextView) findViewById(R.id.txt_task);
 		mCurView = mBaokao;
 		mSetting.setOnClickListener(this);
-		mFriends.setOnClickListener(this);
+		mTask.setOnClickListener(this);
 		mBaokao.setOnClickListener(this);
 		mPostFriends.setOnClickListener(this);
 		mMessage.setOnClickListener(this);
@@ -187,6 +189,7 @@ public class HomeActivity extends BaseActivity implements OnClickListener,
 		mFriendsView = new FriendsView(this);
 		mSettingView = new SettingView1(this);
 		mMessageView = new MessageView(this, this);
+		mTaskView = new TaskView(this, this);
 		if (index == 3) {
 			addView(mMessageView.getView());
 			setBackground(mMessage, R.drawable.message_selected);
@@ -258,10 +261,12 @@ public class HomeActivity extends BaseActivity implements OnClickListener,
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
 		case R.id.setting: {
+
 			setTitleText("我的主页");
 			setBottomMsg(mSetting, mSettingView.getView(), 5,
 					R.drawable.setting_selected);
 			mAlterId = R.drawable.setting_default;
+
 			break;
 		}
 		case R.id.baokao: {
@@ -282,11 +287,22 @@ public class HomeActivity extends BaseActivity implements OnClickListener,
 			mGraduateView.setPos(mPos);
 			break;
 		}
-		case R.id.friends: {
-			setTitleText("我的好友");
-			setBottomMsg(mFriends, mFriendsView.getView(), 4,
+		case R.id.txt_task: {
+			setTitleText("发现");
+			setBottomMsg(mTask, mTaskView.getView(), 4,
 					R.drawable.friends_selected);
 			mAlterId = R.drawable.friends_default;
+			setRightBtnVisibility(View.VISIBLE);
+			setRightBg(0);
+			setRightBtnText("发布任务");
+			mRightBtn.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					startActivity(new Intent(HomeActivity.this,
+							PublishTaskActivity.class));
+				}
+			});
 			break;
 		}
 		case R.id.message: {
@@ -299,6 +315,7 @@ public class HomeActivity extends BaseActivity implements OnClickListener,
 		default:
 			break;
 		}
+
 	}
 
 	private void setBottomMsg(TextView view, View addView, int i, int selectid) {
@@ -312,6 +329,8 @@ public class HomeActivity extends BaseActivity implements OnClickListener,
 	private void setBackground(TextView selectview, int id2) {
 		mCurView.setCompoundDrawablesWithIntrinsicBounds(0, mAlterId, 0, 0);
 		selectview.setCompoundDrawablesWithIntrinsicBounds(0, id2, 0, 0);
+		mCurView.setTextColor(Color.rgb(112, 119, 136));
+		selectview.setTextColor(Color.rgb(240, 81, 51));
 		mCurView = selectview;
 	}
 

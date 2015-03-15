@@ -3,7 +3,6 @@ package com.edu.kygroup.ui;
 import android.app.Activity;
 import android.app.Dialog;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,7 +31,7 @@ public abstract class BaseActivity extends Activity {
 	protected LayoutInflater mInflater;
 	private LinearLayout mDividerLine;
 	private Button mLeftBtn;
-	private Button mRightBtn;
+	protected Button mRightBtn;
 	private TextView mTitle;
 	private View mChildView;
 	private LinearLayout mParentView;

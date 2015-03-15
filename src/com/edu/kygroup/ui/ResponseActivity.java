@@ -274,7 +274,7 @@ public class ResponseActivity extends BaseActivity implements IBindData,
 				buf.append("email=" + mUser.getEmail());
 				buf.append("&guest=" + mResUser.getEmail());
 				buf.append("&res.tid=" + mTopic.getTid());
-				buf.append("&res.content=" + str.trim());
+				buf.append("&res.content=" + URLEncoder.encode(str.trim()));
 				String url = buf.toString();
 				File file = BitmapUtils.getImageFile(selectPicPath);
 				final String result = FileUtils.uploadCommentFile(file, url);

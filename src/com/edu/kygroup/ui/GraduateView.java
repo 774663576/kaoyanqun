@@ -422,8 +422,8 @@ public class GraduateView implements IBindData, OnClickListener,
 		imageView.startAnimation(animation);
 		if (arg0 == 1) {
 			mContext.setRightBtnVisibility(View.VISIBLE);
-			// mContext.setRightBg(R.drawable.postgraduate_selected);
-			mContext.setRightBtnText(R.string.select);
+			mContext.setRightBg(R.drawable.title_bar_up);
+			// mContext.setRightBtnText(R.string.select);
 		} else {
 			mContext.setRightBtnVisibility(View.GONE);
 		}
@@ -439,7 +439,7 @@ public class GraduateView implements IBindData, OnClickListener,
 		mViews.add(mBrowserView);
 		mBrowserUser = new ArrayList<User>();
 		mBrowserUser.add(user);
-		mBrowserAdapter = new UserAdapter(mContext, mBrowserUser);
+		mBrowserAdapter = new UserAdapter(mContext, mBrowserUser, 0);
 		mBrowserListview.setAdapter(mBrowserAdapter);
 		mBrowserListview.setOnItemClickListener(this);
 
@@ -451,7 +451,7 @@ public class GraduateView implements IBindData, OnClickListener,
 		mViews.add(mPostView);
 		mPostUser = new ArrayList<User>();
 		mPostUser.add(user);
-		mPostAdapter = new UserAdapter(mContext, mPostUser);
+		mPostAdapter = new UserAdapter(mContext, mPostUser, 1);
 		mPostListview.setAdapter(mPostAdapter);
 		mPostListview.setOnItemClickListener(this);
 		initPostListView();
@@ -460,7 +460,7 @@ public class GraduateView implements IBindData, OnClickListener,
 		// (PullToRefreshListView)mPostView.findViewById(R.id.same_major_listview);
 		mSameMajorUser = new ArrayList<User>();
 		mSameMajorUser.add(user);
-		mSameMajorAdapter = new UserAdapter(mContext, mSameMajorUser);
+		mSameMajorAdapter = new UserAdapter(mContext, mSameMajorUser, 1);
 		// mSameMajorListView.setAdapter(mSameMajorAdapter);
 		// mSameMajorListView.setOnItemClickListener(this);
 		// initSameMajorListView();
@@ -469,7 +469,7 @@ public class GraduateView implements IBindData, OnClickListener,
 		// (PullToRefreshListView)mPostView.findViewById(R.id.same_colleage_listview);
 		mSameColleageUser = new ArrayList<User>();
 		mSameColleageUser.add(user);
-		mSameColleageAdapter = new UserAdapter(mContext, mSameColleageUser);
+		mSameColleageAdapter = new UserAdapter(mContext, mSameColleageUser, 1);
 		// mSameColleageListView.setAdapter(mSameColleageAdapter);
 		// mSameColleageListView.setOnItemClickListener(this);
 		// initSameColleageListView();
@@ -480,7 +480,7 @@ public class GraduateView implements IBindData, OnClickListener,
 		if (mUser.getRole() != 0) {
 			mPostGraduateUser.add(user);
 		}
-		mPostGraduateAdapter = new UserAdapter(mContext, mPostGraduateUser);
+		mPostGraduateAdapter = new UserAdapter(mContext, mPostGraduateUser, 1);
 		// mPostGraduateListView.setAdapter(mPostGraduateAdapter);
 		// mPostGraduateListView.setOnItemClickListener(this);
 		// initPostGraduateListView();
@@ -491,7 +491,7 @@ public class GraduateView implements IBindData, OnClickListener,
 		mViews.add(mFellowView);
 		mFellowUser = new ArrayList<User>();
 		mFellowUser.add(user);
-		mFellowAdapter = new UserAdapter(mContext, mFellowUser);
+		mFellowAdapter = new UserAdapter(mContext, mFellowUser, 0);
 		mFellowListview.setAdapter(mFellowAdapter);
 		mFellowListview.setOnItemClickListener(this);
 		initFellowListView();
@@ -502,7 +502,7 @@ public class GraduateView implements IBindData, OnClickListener,
 		mViews.add(mMatesView);
 		mMatesUser = new ArrayList<User>();
 		mMatesUser.add(user);
-		mMatesAdapter = new UserAdapter(mContext, mMatesUser);
+		mMatesAdapter = new UserAdapter(mContext, mMatesUser, 0);
 		mMatesListview.setAdapter(mMatesAdapter);
 		mMatesListview.setOnItemClickListener(this);
 		initMatesListView();
@@ -902,6 +902,9 @@ public class GraduateView implements IBindData, OnClickListener,
 					@Override
 					public void onLastItemVisible() {
 						// TODO Auto-generated method stub
+						if (mPosition == 2) {
+							return;
+						}
 						if (!mCurPostGetData && mCurPostPage <= CUR_POST_PAGE) {
 							mCurPostGetData = true;
 							getPostGraduates(mCurPostPage, mPosition);

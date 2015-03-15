@@ -62,11 +62,21 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/child_parent_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_below="@+id/title_divider"
+        android:background="@color/bg_color"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/bottom_bar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/title_text_color"
+        android:background="@color/white"
         android:orientation="horizontal"
         android:visibility="gone" >
 
@@ -74,14 +84,13 @@
             android:id="@+id/baokao"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_centerInParent="true"
             android:layout_weight="1"
             android:drawableTop="@drawable/baokao_default"
             android:gravity="center"
             android:paddingBottom="3dp"
             android:paddingTop="3dp"
             android:text="@string/baokao"
-            android:textColor="@color/white" >
+            android:textColor="@color/text_color_nomal" >
         </TextView>
 
         <TextView
@@ -94,7 +103,19 @@
             android:paddingBottom="3dp"
             android:paddingTop="3dp"
             android:text="@string/search_post_graduate"
-            android:textColor="@color/white" />
+            android:textColor="@color/text_color_nomal" />
+
+        <TextView
+            android:id="@+id/txt_task"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/friends_default"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="发现"
+            android:textColor="@color/text_color_nomal" />
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -109,7 +130,7 @@
                 android:drawableTop="@drawable/message_default"
                 android:gravity="center"
                 android:text="@string/message"
-                android:textColor="@color/white" />
+                android:textColor="@color/text_color_nomal" />
 
             <TextView
                 android:id="@+id/unread_msg_number"
@@ -125,18 +146,6 @@
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/friends"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/friends_default"
-            android:gravity="center"
-            android:paddingBottom="3dp"
-            android:paddingTop="3dp"
-            android:text="@string/friends"
-            android:textColor="@color/white" />
-
-        <TextView
             android:id="@+id/setting"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -146,17 +155,7 @@
             android:paddingBottom="3dp"
             android:paddingTop="3dp"
             android:text="@string/setting"
-            android:textColor="#ffffff" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/child_parent_view"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_above="@+id/bottom_bar"
-        android:layout_below="@+id/title_divider"
-        android:background="@color/bg_color"
-        android:orientation="horizontal" >
+            android:textColor="@color/text_color_nomal" />
     </LinearLayout>
 
 </RelativeLayout>

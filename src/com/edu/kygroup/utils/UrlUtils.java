@@ -2,9 +2,9 @@ package com.edu.kygroup.utils;
 
 public class UrlUtils {
 	// http://www.yifulou.cn:8080/exam/detail?user.email=619123696@qq.com
-	// public final static String BASE_URL = "http://192.168.1.101:8080";
+	// public final static String BASE_URL = "http://192.168.0.129:8080";
 	// private final static String BASE_URL = "http://116.255.238.45:20178";
-	// public final static String BASE_URL = "http://192.168.1.105:8080";
+	// public final static String BASE_URL = "http://192.168.1.115:8080";
 	public final static String BASE_URL = "http://www.yifulou.cn:8180";
 	public final static String REGISTER_URL = BASE_URL
 			+ "/exam/register.action?";
@@ -117,5 +117,12 @@ public class UrlUtils {
 	// 调剂院校
 	public final static String TIAOJI_DIZCUS = BASE_URL
 			+ "/exam/tiaojiDiscuz.action?";//
-
+	// 发布任务
+	public final static String ADD_TASK = BASE_URL + "/exam/addtask.action?";
+	public final static String GET_TASK_LIST = BASE_URL
+			+ "/exam/gettasklist.action?";
+	public final static String ADD_TASK_COMMENT = BASE_URL
+			+ "/exam/addtaskcomment.action?";
+	public final static String GET_TASK_COMMENT_LIST = BASE_URL
+			+ "/exam/gettaskcommentlist.action?";
 }

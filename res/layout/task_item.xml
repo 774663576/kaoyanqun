@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:paddingTop="10dip" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" >
+
+        <RelativeLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="25dip"
+            android:background="@drawable/record_bg"
+            android:orientation="vertical" >
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dip"
+                android:layout_marginTop="35dip"
+                android:background="@color/color_d5" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line"
+                android:layout_marginLeft="10dip"
+                android:singleLine="true"
+                android:layout_marginTop="10dip"
+                android:text="Button"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_title"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="5dip"
+                android:text="Button"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_price"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="5dip"
+                android:maxLines="2"
+                android:paddingBottom="10dip"
+                android:text="Button"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dip"
+                android:layout_below="@+id/txt_content"
+                android:background="@color/color_d5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1" >
+
+                <com.edu.kygroup.widget.DrawableCenterTextView
+                    android:id="@+id/btn_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/btn_zhuanfa_normal"
+                    android:drawablePadding="3dip"
+                    android:gravity="center_vertical"
+                    android:padding="5dip"
+                    android:text="转发"
+                    android:textColor="@color/gray" />
+
+                <View
+                    android:layout_width="0.5dip"
+                    android:layout_height="match_parent"
+                    android:background="@color/bbs_layout" />
+
+                <com.edu.kygroup.widget.DrawableCenterTextView
+                    android:id="@+id/btn_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/btn_comment_normal"
+                    android:drawablePadding="3dip"
+                    android:gravity="center_vertical"
+                    android:padding="5dip"
+                    android:text="回复"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="70dip"
+                android:layout_marginTop="5dip"
+                android:textSize="14sp" />
+        </RelativeLayout>
+        <!--  -->
+        <!-- com.edu.kygroup.widget.CircularImage -->
+
+        <com.edu.kygroup.widget.CircularImage
+            android:id="@+id/img_avatar"
+            android:layout_width="55dip"
+            android:layout_height="55dip"
+            android:layout_marginLeft="20dip"
+            android:src="@drawable/qq" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@+id/img_avatar"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

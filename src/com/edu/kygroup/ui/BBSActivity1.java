@@ -95,7 +95,7 @@ public class BBSActivity1 extends FragmentActivity implements OnClickListener,
 	private void initView() {
 		btn_right = (TextView) findViewById(R.id.right_btn);
 		btn_left = (Button) findViewById(R.id.left_btn);
-		btn_left.setText(R.string.major);
+		btn_left.setText(R.string.university);
 		title_layout = (RelativeLayout) findViewById(R.id.title_layout);
 		txt_title = (TextView) findViewById(R.id.title);
 		txt_title.setText(mFocusInfo.getmFocusMajor());

@@ -70,6 +70,7 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/pic"
             android:text="190aaaaaaaaaa2"
+            android:maxLength="15"
             android:textColor="#aaaaaa"
             android:textSize="10sp" />
 
