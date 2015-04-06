@@ -3,9 +3,14 @@ package com.edu.kygroup.ui;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.edu.kygroup.R;
@@ -37,6 +42,7 @@ public class TaskView {
 				.getRSid()));
 		initView();
 		setValue();
+		regisiterRecevier();
 	}
 
 	public View getView() {
@@ -46,10 +52,20 @@ public class TaskView {
 
 	private void initView() {
 		mListView = (ListView) mView.findViewById(R.id.mListView);
+		mListView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1,
+					int position, long arg3) {
+				mContext.startActivity(new Intent(mContext,
+						TaskCommentActivity.class).putExtra("task",
+						lists.get(position)));
+			}
+		});
 	}
 
 	private void setValue() {
-		adapter = new TaskAdapter(mContext, lists);
+		adapter = new TaskAdapter(mActivity, lists);
 		mListView.setAdapter(adapter);
 		refush();
 	}
@@ -70,5 +86,26 @@ public class TaskView {
 			}
 		});
 		task.executeParallel(tList);
+	}
+
+	private void regisiterRecevier() {
+		IntentFilter filter = new IntentFilter("com.kygroup.add.task");
+		mContext.registerReceiver(receiver, filter);
+	}
+
+	BroadcastReceiver receiver = new BroadcastReceiver() {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			Task task = (Task) intent.getSerializableExtra("task");
+			lists.add(0, task);
+			adapter.notifyDataSetChanged();
+		}
+	};
+
+	public void onDestory() {
+		if (null != receiver) {
+			mContext.unregisterReceiver(receiver);
+		}
 	}
 }

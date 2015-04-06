@@ -337,6 +337,9 @@ public class ChatActivity1 extends BaseActivity implements OnClickListener {
 			toChatUsername = getIntent().getStringExtra("groupId");
 			group = EMGroupManager.getInstance().getGroup(toChatUsername);
 			System.out.println("groutp::::::::::::::" + toChatUsername);
+			setRightBtnVisibility(View.VISIBLE);
+			setRightBg(R.drawable.avq);
+			setRightBtnClickListener(this);
 
 		}
 		conversation = EMChatManager.getInstance().getConversation(
@@ -635,6 +638,8 @@ public class ChatActivity1 extends BaseActivity implements OnClickListener {
 			startActivityForResult(intent, REQUEST_CODE_SELECT_VIDEO);
 		} else if (id == R.id.btn_file) { // 点击文件图标
 			selectFileFromLocal();
+		} else if (id == R.id.right_btn) {
+			startActivity(new Intent(this, GroupUserActivity.class));
 		}
 	}
 

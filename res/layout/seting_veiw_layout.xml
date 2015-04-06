@@ -22,42 +22,45 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/person_bg" />
 
-            <TextView
-                android:id="@+id/txt_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/imageView1"
-                android:layout_marginLeft="76dp"
-                android:background="#64ffffff"
-                android:paddingBottom="10dip"
-                android:paddingLeft="30dip"
-                android:paddingTop="10dip"
-                android:text="张三"
-                android:textSize="16sp" />
+            <!-- <TextView -->
+            <!-- android:id="@+id/txt_name" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_alignBottom="@+id/imageView1" -->
+            <!-- android:layout_marginLeft="76dp" -->
+            <!-- android:background="#64ffffff" -->
+            <!-- android:paddingBottom="10dip" -->
+            <!-- android:paddingLeft="30dip" -->
+            <!-- android:paddingTop="10dip" -->
+            <!-- android:text="张三" -->
+            <!-- android:textSize="16sp" /> -->
 
-            <RelativeLayout
-                android:id="@+id/relativeLayout1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/imageView1"
-                android:layout_marginLeft="10dip"
-                android:layout_marginTop="-47dip" >
 
-                <ImageView
-                    android:id="@+id/iv_headbg"
-                    android:layout_width="96dip"
-                    android:layout_height="96dip"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/person_avatar_bg" />
-                <!-- com.edu.kygroup.widget.CircularImage -->
+            <!-- <RelativeLayout -->
+            <!-- android:id="@+id/relativeLayout1" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_below="@+id/imageView1" -->
+            <!-- android:layout_marginLeft="10dip" -->
+            <!-- android:layout_marginTop="-47dip" > -->
 
-                <com.edu.kygroup.widget.CircularImage
-                    android:id="@+id/img_avatar"
-                    android:layout_width="90dip"
-                    android:layout_height="90dip"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/pic_boy" />
-            </RelativeLayout>
+
+            <!-- <ImageView -->
+            <!-- android:id="@+id/iv_headbg" -->
+            <!-- android:layout_width="96dip" -->
+            <!-- android:layout_height="96dip" -->
+            <!-- android:layout_centerInParent="true" -->
+            <!-- android:src="@drawable/person_avatar_bg" /> -->
+            <!-- com.edu.kygroup.widget.CircularImage -->
+
+
+            <!-- <ImageView -->
+            <!-- android:id="@+id/img_avatar" -->
+            <!-- android:layout_width="90dip" -->
+            <!-- android:layout_height="90dip" -->
+            <!-- android:layout_centerInParent="true" -->
+            <!-- android:src="@drawable/pic_boy" /> -->
+            <!-- </RelativeLayout> -->
 
             <TextView
                 android:id="@+id/txt_renzheng"
@@ -71,6 +74,42 @@
                 android:textColor="#999999"
                 android:textSize="13sp" />
 
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dip" >
+
+                <ImageView
+                    android:id="@+id/iv_headbg"
+                    android:layout_width="75dip"
+                    android:layout_height="75dip"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/person_avatar_bg" />
+                <!-- com.edu.kygroup.widget.CircularImage -->
+
+                <com.edu.kygroup.widget.CircularImage
+                    android:id="@+id/img_avatar"
+                    android:layout_width="70dip"
+                    android:layout_height="70dip"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/pic_boy" />
+            </RelativeLayout>
+            <!-- android:background="#64ffffff" -->
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout1"
+                android:gravity="center"
+                android:paddingBottom="10dip"
+                android:paddingTop="5dip"
+                android:text="张三"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,7 +122,7 @@
                     android:id="@+id/txt_gerenxinxi"
                     android:layout_width="match_parent"
                     android:layout_height="45dip"
-                    android:layout_marginTop="40dip"
+                    android:layout_marginTop="10dip"
                     android:background="@color/white"
                     android:drawableLeft="@drawable/home"
                     android:drawablePadding="5dip"
@@ -187,6 +226,22 @@
                 <!-- android:textSize="16sp" /> -->
 
                 <TextView
+                    android:id="@+id/txt_chengji"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/kaoyanchengji"
+                    android:drawablePadding="5dip"
+                    android:drawableRight="@drawable/ic_common_arrow_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:text="考研成绩"
+                    android:textColor="#394257"
+                    android:textSize="16sp" />
+
+                <TextView
                     android:id="@+id/txt_zhuti"
                     android:layout_width="match_parent"
                     android:layout_height="45dip"
@@ -204,10 +259,27 @@
                     android:textSize="16sp" />
 
                 <TextView
+                    android:id="@+id/txt_renwu"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@+id/layout_baokaoyuanxiao"
+                    android:layout_marginTop="1dip"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/my_theme"
+                    android:drawablePadding="5dip"
+                    android:drawableRight="@drawable/ic_common_arrow_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:text="任务"
+                    android:textColor="#394257"
+                    android:textSize="16sp" />
+
+                <TextView
                     android:id="@+id/txt_friend"
                     android:layout_width="match_parent"
                     android:layout_height="45dip"
-                    android:layout_marginTop="1dip"
+                    android:layout_marginTop="10dip"
                     android:background="@color/white"
                     android:drawableLeft="@drawable/find_friend_img"
                     android:drawablePadding="5dip"

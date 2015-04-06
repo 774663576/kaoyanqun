@@ -22,5 +22,6 @@ public class Constant {
 	public static final String EXTRA_IMAGE_INDEX = "image_index";
 	public static final String EXTRA_IMAGE_URLS = "image_urls";
 	public static final String UPDATE_USER_AVATAR = "com.edu.updata_user_avatar";
+	public static final String ADD_TIP_COMMENT = "com.edu.add_tip_comment";
 
 }

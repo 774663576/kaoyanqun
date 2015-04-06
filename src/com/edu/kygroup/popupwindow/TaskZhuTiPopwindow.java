@@ -8,6 +8,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.AdapterView;
@@ -19,6 +20,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.edu.kygroup.R;
+import com.edu.kygroup.utils.ToastUtils;
 
 public class TaskZhuTiPopwindow implements OnItemClickListener {
 	private PopupWindow popupWindow;
@@ -30,22 +32,14 @@ public class TaskZhuTiPopwindow implements OnItemClickListener {
 	private OnlistOnclick callback;
 	private List<String> lists = new ArrayList<String>();
 
-	public TaskZhuTiPopwindow(Context context, View v) {
+	public TaskZhuTiPopwindow(Context context, View v, List<String> lists) {
 		this.mContext = context;
 		this.v = v;
+		this.lists = lists;
 		LayoutInflater inflater = LayoutInflater.from(mContext);
 		view = inflater.inflate(R.layout.task_zhuti_popwindow, null);
-		initData();
 		initView();
 		initPopwindow();
-	}
-
-	private void initData() {
-		lists.add("指导专业课复习");
-		lists.add("指导复试");
-		lists.add("讲讲本专业录取情况");
-		lists.add("帮忙推荐导师");
-
 	}
 
 	private void initView() {
@@ -61,7 +55,7 @@ public class TaskZhuTiPopwindow implements OnItemClickListener {
 	@SuppressWarnings("deprecation")
 	private void initPopwindow() {
 		popupWindow = new PopupWindow(view, LayoutParams.WRAP_CONTENT,
-				LayoutParams.WRAP_CONTENT);
+				LayoutParams.WRAP_CONTENT, false);
 		// 这个是为了点击“返回Back”也能使其消失，并且并不会影响你的背景（很神奇的）
 		popupWindow.setBackgroundDrawable(new BitmapDrawable());
 	}
@@ -74,7 +68,7 @@ public class TaskZhuTiPopwindow implements OnItemClickListener {
 		v.getLocationOnScreen(location);
 		popupWindow.showAtLocation(v, Gravity.NO_GRAVITY,
 				location[0] + v.getWidth(), location[1] + v.getHeight()); // 使其聚集
-		popupWindow.setFocusable(true);
+		// popupWindow.setFocusable(true);
 		// 设置允许在外点击消失
 		popupWindow.setOutsideTouchable(true);
 		// 刷新状态
@@ -104,7 +98,8 @@ public class TaskZhuTiPopwindow implements OnItemClickListener {
 		}
 
 		@Override
-		public View getView(int position, View convertView, ViewGroup parent) {
+		public View getView(final int position, View convertView,
+				ViewGroup parent) {
 			ViewHolder holder = null;
 			if (convertView == null) {
 				convertView = LayoutInflater.from(mContext).inflate(
@@ -116,6 +111,14 @@ public class TaskZhuTiPopwindow implements OnItemClickListener {
 				holder = (ViewHolder) convertView.getTag();
 			}
 			holder.text.setText(lists.get(position));
+			holder.text.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View arg0) {
+					callback.onclick(lists.get(position));
+					dismiss();
+				}
+			});
 			return convertView;
 		}
 	}
@@ -131,8 +134,8 @@ public class TaskZhuTiPopwindow implements OnItemClickListener {
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View v, int position, long arg3) {
-		callback.onclick(lists.get(position));
-		dismiss();
+		// callback.onclick(lists.get(position));
+		// dismiss();
 	}
 
 	public interface OnlistOnclick {

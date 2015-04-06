@@ -45,14 +45,14 @@ public class PersonDetailActivity extends FragmentActivity implements
 	private int currentTabIndex = -1;
 	private User user;
 	private Dialog mDialog = null;
-	private ImageView img_renzheng;
+	// private ImageView img_renzheng;
 
 	public ImageLoader mImageLoader;
 	public DisplayImageOptions mOptions;
 
 	private CircularImage img_avatar;
 	private TextView txt_name;
-	private TextView txt_renzheng;
+	// private TextView txt_renzheng;
 
 	private RelativeLayout mMsgLayout;
 	private RelativeLayout mFocusLayout;
@@ -89,7 +89,7 @@ public class PersonDetailActivity extends FragmentActivity implements
 	}
 
 	private void initView() {
-		img_renzheng = (ImageView) findViewById(R.id.img_renzheng);
+//		img_renzheng = (ImageView) findViewById(R.id.img_renzheng);
 
 		txt_focus_id = (TextView) findViewById(R.id.focus_id);
 		txt_focus_tv = (TextView) findViewById(R.id.focus_tv);
@@ -109,7 +109,7 @@ public class PersonDetailActivity extends FragmentActivity implements
 		mImageLoader.displayImage(user.getPic(), img_avatar, mOptions);
 		System.out.println("user::::::::::::::" + user.getPic());
 		txt_name = (TextView) findViewById(R.id.txt_name);
-		txt_renzheng = (TextView) findViewById(R.id.txt_renzheng);
+//		txt_renzheng = (TextView) findViewById(R.id.txt_renzheng);
 		txt_name.setText(user.getNickName());
 		Drawable drawable;
 		String year = "";
@@ -117,24 +117,23 @@ public class PersonDetailActivity extends FragmentActivity implements
 			year = user.getEYear();
 		} else {
 			year = user.getRYear();
-
 		}
 		String postMsg = user.getRSchool() + " | " + user.getRCollege() + " | "
 				+ user.getRMajor() + " 专业 " + year + "级研究生";
-		if (user.getRole() == 2) {
-			txt_renzheng.setText(postMsg);
-			img_renzheng.setImageResource(R.drawable.certification);
-
-		} else if (user.getRole() == 1) {
-			img_renzheng.setImageResource(R.drawable.un_certifiaction);
-			txt_renzheng.setText(postMsg);
-
-		} else {
-			img_renzheng.setImageResource(R.drawable.un_certifiaction);
-			txt_renzheng.setText(postMsg);
-			img_renzheng.setVisibility(View.INVISIBLE);
-			txt_renzheng.setVisibility(View.INVISIBLE);
-		}
+		// if (user.getRole() == 2) {
+		// txt_renzheng.setText(postMsg);
+		// img_renzheng.setImageResource(R.drawable.certification);
+		//
+		// } else if (user.getRole() == 1) {
+		// img_renzheng.setImageResource(R.drawable.un_certifiaction);
+		// txt_renzheng.setText(postMsg);
+		//
+		// } else {
+		// img_renzheng.setImageResource(R.drawable.un_certifiaction);
+		// txt_renzheng.setText(postMsg);
+		// img_renzheng.setVisibility(View.INVISIBLE);
+		// txt_renzheng.setVisibility(View.INVISIBLE);
+		// }
 
 		if (mCurRelation == 0) {
 			txt_focus_tv.setText(R.string.add);

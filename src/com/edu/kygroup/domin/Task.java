@@ -130,7 +130,12 @@ public class Task implements Serializable {
 
 	public int addTask() {
 		int res = -1;
-		StringBuffer buf = new StringBuffer(UrlUtils.ADD_TASK);
+		StringBuffer buf = null;
+		if (task_id > 0) {
+			buf = new StringBuffer(UrlUtils.EDIT_TASK);
+		} else {
+			buf = new StringBuffer(UrlUtils.ADD_TASK);
+		}
 		buf.append("&task.task_id=" + task_id);
 		buf.append("&task.task_category=" + task_category);
 		buf.append("&task.user_id=" + user_id);
@@ -145,9 +150,26 @@ public class Task implements Serializable {
 		try {
 			JSONObject obj = new JSONObject(result);
 			res = obj.getInt("result");
+			if (res == 200) {
+				task_id = obj.getInt("task_id");
+			}
 		} catch (JSONException e) {
 		}
 		return res;
 
+	}
+
+	public int delTask() {
+		int res = -1;
+		StringBuffer buf = new StringBuffer(UrlUtils.DEL_TASK);
+		buf.append("&task_id=" + task_id);
+		String url = buf.toString();
+		String result = HttpAgent.httpPost(url);
+		try {
+			JSONObject obj = new JSONObject(result);
+			res = obj.getInt("result");
+		} catch (JSONException e) {
+		}
+		return res;
 	}
 }

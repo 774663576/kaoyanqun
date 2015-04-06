@@ -11,6 +11,6 @@
         android:drawableRight="@drawable/arrow_right"
         android:padding="8dip"
         android:textColor="#999999"
-        android:textSize="17sp" />
+        android:textSize="13sp" />
 
 </LinearLayout>

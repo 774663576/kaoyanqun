@@ -23,8 +23,8 @@ import com.edu.kygroup.adapter.TiaoJiaoYuanXiaoAdapter;
 import com.edu.kygroup.domin.TiaoJiYuanXiao;
 import com.edu.kygroup.net.NetworkTask;
 import com.edu.kygroup.net.NetworkTask.GetFinish;
-import com.edu.kygroup.popupwindow.SelectPicPopwindow1;
-import com.edu.kygroup.popupwindow.SelectPicPopwindow1.SelectMenuOnclick;
+import com.edu.kygroup.popupwindow.SharePopwindow;
+import com.edu.kygroup.popupwindow.SharePopwindow.SelectMenuOnclick;
 import com.edu.kygroup.utils.TagUtils;
 import com.edu.kygroup.utils.ToastUtils;
 import com.edu.kygroup.utils.UrlUtils;
@@ -66,9 +66,8 @@ public class TiaoJiYuanXiaoActivity extends BaseActivity {
 			@Override
 			public void onClick(View v) {
 
-				SelectPicPopwindow1 pop = new SelectPicPopwindow1(
-						TiaoJiYuanXiaoActivity.this, v, new String[] { "QQ好友",
-								"QQ空间", "微信好友", "微信朋友圈" });
+				SharePopwindow pop = new SharePopwindow(
+						TiaoJiYuanXiaoActivity.this, v);
 				pop.setmSelectOnclick(new SelectMenuOnclick() {
 
 					@Override

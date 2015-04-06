@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/input_layout"
+        android:background="@drawable/record_bg"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/bbs_layout"
+        android:dividerHeight="0.5dip"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:scrollbars="none" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        android:paddingTop="4dp" >
+
+        <TextView
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bbs_shape"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="4dp"
+            android:text="发送"
+            android:textColor="#888888"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/input_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/send"
+            android:layout_toRightOf="@+id/layout_pic"
+            android:background="@drawable/textfield_default_holo_light"
+            android:textColor="@color/nomal_font_color"
+            android:textSize="13sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <RelativeLayout
+            android:id="@+id/layout_pic"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="5dip" >
+
+            <ImageView
+                android:id="@+id/img_camera"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:scaleType="centerCrop"
+                android:src="@drawable/camera" />
+
+            <ImageView
+                android:id="@+id/img_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/del"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

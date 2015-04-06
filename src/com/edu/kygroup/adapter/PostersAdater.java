@@ -30,8 +30,8 @@ import cn.sharesdk.wechat.moments.WechatMoments;
 import com.edu.kygroup.R;
 import com.edu.kygroup.domin.Louzhu;
 import com.edu.kygroup.domin.Poster.Topic;
-import com.edu.kygroup.popupwindow.SelectPicPopwindow1;
-import com.edu.kygroup.popupwindow.SelectPicPopwindow1.SelectMenuOnclick;
+import com.edu.kygroup.popupwindow.SharePopwindow;
+import com.edu.kygroup.popupwindow.SharePopwindow.SelectMenuOnclick;
 import com.edu.kygroup.ui.ImagePagerActivity;
 import com.edu.kygroup.ui.ResponseActivity;
 import com.edu.kygroup.utils.Constant;
@@ -207,8 +207,7 @@ public class PostersAdater extends BaseAdapter {
 		public void onClick(View v) {
 			switch (v.getId()) {
 			case R.id.btn_share:
-				SelectPicPopwindow1 pop = new SelectPicPopwindow1(mContext, v,
-						new String[] { "QQ好友", "QQ空间", "微信好友", "微信朋友圈" });
+				SharePopwindow pop = new SharePopwindow(mContext, v);
 				pop.setmSelectOnclick(new SelectMenuOnclick() {
 
 					@Override

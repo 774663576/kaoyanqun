@@ -1,6 +1,9 @@
 package com.edu.kygroup.utils;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import android.app.Activity;
@@ -445,5 +448,8 @@ public class Util {
 	// R.anim.right_out);
 	//
 	// }
-
+	public static String getCurrentDate() {
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		return df.format(new Date());
+	}
 }

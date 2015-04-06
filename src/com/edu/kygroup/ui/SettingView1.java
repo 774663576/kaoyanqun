@@ -29,11 +29,12 @@ import cn.sharesdk.wechat.friends.Wechat;
 import cn.sharesdk.wechat.moments.WechatMoments;
 
 import com.edu.kygroup.R;
+import com.edu.kygroup.domin.ChengJi;
 import com.edu.kygroup.domin.User;
 import com.edu.kygroup.iface.IBindData;
 import com.edu.kygroup.net.NetworkTask;
-import com.edu.kygroup.popupwindow.SelectPicPopwindow1;
-import com.edu.kygroup.popupwindow.SelectPicPopwindow1.SelectMenuOnclick;
+import com.edu.kygroup.popupwindow.SharePopwindow;
+import com.edu.kygroup.popupwindow.SharePopwindow.SelectMenuOnclick;
 import com.edu.kygroup.utils.ConstantUtils;
 import com.edu.kygroup.utils.SharedUtils;
 import com.edu.kygroup.utils.TagUtils;
@@ -64,6 +65,8 @@ public class SettingView1 implements OnClickListener, IBindData {
 	private CircularImage img_avatar;
 	private TextView txt_friend;
 	private LinearLayout layout_baokao;
+	private TextView txt_renwu;
+	private TextView txt_kaoyan_chengji;
 
 	private String sname = "";
 	private String sid = "";
@@ -76,7 +79,6 @@ public class SettingView1 implements OnClickListener, IBindData {
 				R.layout.seting_veiw_layout, null);
 		initView();
 		initShareSDk();
-
 	}
 
 	private void initShareSDk() {
@@ -99,6 +101,7 @@ public class SettingView1 implements OnClickListener, IBindData {
 	}
 
 	private void initView() {
+		txt_kaoyan_chengji = (TextView) mView.findViewById(R.id.txt_chengji);
 		txt_friend = (TextView) mView.findViewById(R.id.txt_friend);
 		txt_name = (TextView) mView.findViewById(R.id.txt_name);
 		txt_name.setText(KygroupApplication.mUser.getNickName());
@@ -120,6 +123,7 @@ public class SettingView1 implements OnClickListener, IBindData {
 		txt_bangzhu = (TextView) mView.findViewById(R.id.txt_bangzhu);
 		txt_tuichu = (TextView) mView.findViewById(R.id.txt_tuichu);
 		img_avatar = (CircularImage) mView.findViewById(R.id.img_avatar);
+		txt_renwu = (TextView) mView.findViewById(R.id.txt_renwu);
 		// mContext.mImageLoader.displayImage(KygroupApplication.mUser.getPic(),
 		// img_avatar, mContext.mOptions);
 		updateAvatar();
@@ -136,6 +140,7 @@ public class SettingView1 implements OnClickListener, IBindData {
 	}
 
 	private void setListener() {
+		txt_kaoyan_chengji.setOnClickListener(this);
 		txt_friend.setOnClickListener(this);
 		txt_gerenxinxi.setOnClickListener(this);
 		layout_biyeyuanxiao.setOnClickListener(this);
@@ -150,6 +155,7 @@ public class SettingView1 implements OnClickListener, IBindData {
 		txt_tuichu.setOnClickListener(this);
 		// txt_bangding.setOnClickListener(this);
 		layout_baokao.setOnClickListener(this);
+		txt_renwu.setOnClickListener(this);
 
 	}
 
@@ -170,6 +176,13 @@ public class SettingView1 implements OnClickListener, IBindData {
 				tv.setText(R.string.auth_post2);
 			}
 		}
+		if (role == 0) {
+			txt_kaoyan_chengji.setVisibility(View.GONE);
+		} else {
+			txt_kaoyan_chengji.setVisibility(View.VISIBLE);
+
+		}
+
 	}
 
 	public void alterPerMsg(String mSchoolId, String mColleageId,
@@ -241,8 +254,7 @@ public class SettingView1 implements OnClickListener, IBindData {
 			break;
 		case R.id.txt_fenxiang:
 
-			SelectPicPopwindow1 pop = new SelectPicPopwindow1(mContext, v,
-					new String[] { "QQ好友", "QQ空间", "微信好友", "微信朋友圈" });
+			SharePopwindow pop = new SharePopwindow(mContext, v);
 			pop.setmSelectOnclick(new SelectMenuOnclick() {
 
 				@Override
@@ -301,6 +313,15 @@ public class SettingView1 implements OnClickListener, IBindData {
 			mContext.startActivityForResult(intent, 0);
 			mContext.overridePendingTransition(R.anim.push_left_in,
 					R.anim.push_left_out);
+			break;
+		case R.id.txt_renwu:
+			intent = new Intent(mContext, MyTaskActivity.class);
+			mContext.startActivity(intent);
+			break;
+		case R.id.txt_chengji:
+			intent = new Intent(mContext, KaoYanChengJiActivity.class);
+			intent.putExtra("chengji", mContext.getChengji());
+			mContext.startActivity(intent);
 			break;
 		default:
 			break;

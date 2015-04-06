@@ -16,22 +16,25 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.edu.kygroup.R;
+import com.edu.kygroup.domin.ChengJi;
 import com.edu.kygroup.domin.FocusInfo;
 import com.edu.kygroup.domin.MajorDetail;
 import com.edu.kygroup.domin.User;
 import com.edu.kygroup.net.NetworkTask;
 import com.edu.kygroup.net.NetworkTask.GetFinish;
+import com.edu.kygroup.task.AbstractTaskPostCallBack;
+import com.edu.kygroup.task.GetChengJiTask;
 import com.edu.kygroup.ui.MajorDetailsActivity2;
 import com.edu.kygroup.ui.PersonDetailActivity;
 import com.edu.kygroup.utils.DeviceUtils;
 import com.edu.kygroup.utils.StringUtils;
 import com.edu.kygroup.utils.TagUtils;
 import com.edu.kygroup.utils.UrlUtils;
-import com.edu.kygroup.widget.CircularImage;
 
 public class PersonInfoFragment extends Fragment implements OnClickListener {
 	private User mFriendUser;
@@ -49,6 +52,15 @@ public class PersonInfoFragment extends Fragment implements OnClickListener {
 	public Dialog mDialog = null;
 	public NetworkTask task;
 	private String url = "";
+	private ImageView img_renzheng;
+
+	private TextView txt_renzheng;
+	private LinearLayout layout_beikao, layout_zhankuang;
+	private LinearLayout layout_chengji;
+	private LinearLayout layout_object1, layout_object2, layout_object3,
+			layout_object4;
+	private TextView txt_object1, txt_object2, txt_object3, txt_object4;
+	private TextView txt_fenshu1, txt_fenshu2, txt_fenshu3, txt_fenshu4;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -66,6 +78,30 @@ public class PersonInfoFragment extends Fragment implements OnClickListener {
 	}
 
 	private void initView() {
+		layout_beikao = (LinearLayout) getView().findViewById(
+				R.id.layout_beibao);
+		layout_zhankuang = (LinearLayout) getView().findViewById(
+				R.id.layout_zhankuang);
+		layout_chengji = (LinearLayout) getView().findViewById(
+				R.id.layout_chengji);
+		layout_object1 = (LinearLayout) getView().findViewById(
+				R.id.layout_object1);
+		layout_object2 = (LinearLayout) getView().findViewById(
+				R.id.layout_object2);
+		layout_object3 = (LinearLayout) getView().findViewById(
+				R.id.layout_object3);
+		layout_object4 = (LinearLayout) getView().findViewById(
+				R.id.layout_object4);
+		txt_fenshu1 = (TextView) getView().findViewById(R.id.txt_fenshu1);
+		txt_fenshu2 = (TextView) getView().findViewById(R.id.txt_fenshu2);
+		txt_fenshu3 = (TextView) getView().findViewById(R.id.txt_fenshu3);
+		txt_fenshu4 = (TextView) getView().findViewById(R.id.txt_fenshu4);
+		txt_object1 = (TextView) getView().findViewById(R.id.txt_object1);
+		txt_object2 = (TextView) getView().findViewById(R.id.txt_object2);
+		txt_object3 = (TextView) getView().findViewById(R.id.txt_object3);
+		txt_object4 = (TextView) getView().findViewById(R.id.txt_object4);
+		img_renzheng = (ImageView) getView().findViewById(R.id.img_renzheng);
+		txt_renzheng = (TextView) getView().findViewById(R.id.txt_renzheng);
 		mFocusUniListView = (ListView) getView().findViewById(
 				R.id.focus_uni_list);
 		txt_baokao = (TextView) getView().findViewById(R.id.txt_baokao);
@@ -118,6 +154,37 @@ public class PersonInfoFragment extends Fragment implements OnClickListener {
 	}
 
 	private void setValue() {
+		layout_chengji.setVisibility(View.GONE);
+		String year = "";
+		if (mFriendUser.getRole() == 0) {
+			year = mFriendUser.getEYear();
+		} else {
+			year = mFriendUser.getRYear();
+		}
+		String msg = mFriendUser.getRSchool() + " | "
+				+ mFriendUser.getRCollege() + " | " + mFriendUser.getRMajor()
+				+ " 专业 " + year + "级研究生";
+		if (mFriendUser.getRole() == 2) {
+			txt_renzheng.setText(msg);
+			img_renzheng.setImageResource(R.drawable.certification);
+			layout_beikao.setVisibility(View.GONE);
+			layout_zhankuang.setVisibility(View.GONE);
+
+		} else if (mFriendUser.getRole() == 1) {
+			img_renzheng.setImageResource(R.drawable.un_certifiaction);
+			txt_renzheng.setText(msg);
+			layout_beikao.setVisibility(View.GONE);
+			layout_zhankuang.setVisibility(View.GONE);
+
+		} else {
+			img_renzheng.setImageResource(R.drawable.un_certifiaction);
+			txt_renzheng.setText(msg);
+			img_renzheng.setVisibility(View.GONE);
+			txt_renzheng.setVisibility(View.GONE);
+			layout_beikao.setVisibility(View.VISIBLE);
+			layout_zhankuang.setVisibility(View.VISIBLE);
+
+		}
 		txt_jiguan.setText(hometownString());
 		StringBuffer emsg = new StringBuffer();
 		if (StringUtils.isEmpty(mFriendUser.getESchool())) {
@@ -144,6 +211,54 @@ public class PersonInfoFragment extends Fragment implements OnClickListener {
 		foucsAdapter = new ArrayAdapter<String>(getActivity(),
 				R.layout.focus_uni_list, R.id.focus_text, mFocusUnilist);
 		mFocusUniListView.setAdapter(foucsAdapter);
+		getChengJI();
+	}
+
+	private void getChengJI() {
+		if (mFriendUser.getRole() == 2 || mFriendUser.getRole() == 1) {
+			final ChengJi chengji = new ChengJi();
+			chengji.setUser_id(mFriendUser.getEmail());
+			GetChengJiTask task = new GetChengJiTask();
+			task.setmCallBack(new AbstractTaskPostCallBack<Integer>() {
+				@Override
+				public void taskFinish(Integer result) {
+					setChengjiValue(chengji);
+				}
+			});
+			task.executeParallel(chengji);
+		}
+
+	}
+
+	private void setChengjiValue(ChengJi chengji) {
+		if (!"".equals(chengji.getObject1())) {
+			layout_chengji.setVisibility(View.VISIBLE);
+			txt_fenshu1.setText(chengji.getFenshu1());
+			txt_object1.setText(chengji.getObject1());
+			layout_object1.setVisibility(View.VISIBLE);
+
+		}
+		if (!"".equals(chengji.getObject2())) {
+			layout_chengji.setVisibility(View.VISIBLE);
+			txt_fenshu2.setText(chengji.getFenshu2());
+			txt_object2.setText(chengji.getObject2());
+			layout_object2.setVisibility(View.VISIBLE);
+
+		}
+		if (!"".equals(chengji.getObject3())) {
+			layout_chengji.setVisibility(View.VISIBLE);
+			txt_fenshu3.setText(chengji.getFenshu3());
+			txt_object3.setText(chengji.getObject3());
+			layout_object3.setVisibility(View.VISIBLE);
+
+		}
+		if (!"".equals(chengji.getObject4())) {
+			layout_chengji.setVisibility(View.VISIBLE);
+			txt_fenshu4.setText(chengji.getFenshu4());
+			txt_object4.setText(chengji.getObject4());
+			layout_object4.setVisibility(View.VISIBLE);
+
+		}
 	}
 
 	private void appendString(StringBuffer sb, String... strs) {

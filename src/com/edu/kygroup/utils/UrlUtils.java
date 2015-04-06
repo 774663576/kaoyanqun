@@ -125,4 +125,16 @@ public class UrlUtils {
 			+ "/exam/addtaskcomment.action?";
 	public final static String GET_TASK_COMMENT_LIST = BASE_URL
 			+ "/exam/gettaskcommentlist.action?";
+	public final static String GET_TIP_COMMENT_LIST = BASE_URL
+			+ "/exam/gettipcommentlist.action?";
+	public final static String GET_USER_INFO = BASE_URL
+			+ "/exam/getUserInfo.action?";
+	public final static String GET_MY_TASK = BASE_URL
+			+ "/exam/getMyTask.action?";
+	public final static String DEL_TASK = BASE_URL + "/exam/delTask.action?";
+	public final static String EDIT_TASK = BASE_URL + "/exam/editTask.action?";
+	public final static String ADD_CHENGJI = BASE_URL
+			+ "/exam/addChengJi.action?";
+	public final static String GET_CHENGJI = BASE_URL
+			+ "/exam/getChengji.action?";
 }

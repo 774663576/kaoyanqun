@@ -31,15 +31,15 @@
             android:id="@+id/row_recv_pic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_userid"
             android:layout_marginLeft="@dimen/margin_chat_activity"
-            android:layout_toRightOf="@id/iv_userhead"
-             >
+            android:layout_toRightOf="@id/iv_userhead" >
 
             <ImageView
-                android:background="@drawable/chatfrom_bg"
                 android:id="@+id/iv_sendPicture"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/chatfrom_bg"
                 android:scaleType="fitCenter" />
 
             <LinearLayout
@@ -71,9 +71,8 @@
             style="@style/chat_text_name_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@id/iv_userhead"
-            android:layout_toLeftOf="@id/row_recv_pic" />
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:layout_toRightOf="@id/iv_userhead" />
     </RelativeLayout>
 
 </LinearLayout>

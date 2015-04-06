@@ -716,7 +716,7 @@ public class GraduateView implements IBindData, OnClickListener,
 			User user = (User) obj;
 			if (user.getEmail().equals(KygroupApplication.mUser.getEmail())) {
 				mContext.performClickFriends(4);
-			} else {
+			} else { 
 				Intent intent = new Intent(mContext, PersonDetailActivity.class);
 				intent.putExtra("user", user);
 				mContext.startActivityForResult(intent, 100);

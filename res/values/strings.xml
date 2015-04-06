@@ -383,5 +383,10 @@
     <string name="title_activity_my_friends">MyFriendsActivity</string>
     <string name="title_activity_tiaoji_yuanxiao1">TiaojiYuanxiao1Activity</string>
     <string name="title_activity_task_comment">TaskCommentActivity</string>
+    <string name="title_activity_group_user">GroupUserActivity</string>
+    <string name="title_activity_topic_comment">TopicCommentActivity</string>
+    <string name="title_activity_person_detail_activity1">PersonDetailActivity1</string>
+    <string name="title_activity_my_task">MyTaskActivity</string>
+    <string name="title_activity_kao_yan_cheng_ji">KaoYanChengJiActivity</string>
 
 </resources>

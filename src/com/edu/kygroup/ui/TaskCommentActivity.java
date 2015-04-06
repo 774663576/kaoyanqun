@@ -3,6 +3,7 @@ package com.edu.kygroup.ui;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,9 +16,11 @@ import com.edu.kygroup.adapter.TaskCommentAdapter;
 import com.edu.kygroup.domin.Task;
 import com.edu.kygroup.domin.TaskComment;
 import com.edu.kygroup.domin.TaskCommentList;
+import com.edu.kygroup.domin.User;
 import com.edu.kygroup.task.AbstractTaskPostCallBack;
 import com.edu.kygroup.task.AddTaskCommentTask;
 import com.edu.kygroup.task.GetTaskCommentListTask;
+import com.edu.kygroup.task.GetUserInfoTask;
 import com.edu.kygroup.utils.ToastUtils;
 import com.edu.kygroup.utils.UniversalImageLoadTool;
 import com.edu.kygroup.widget.CircularImage;
@@ -34,6 +37,7 @@ public class TaskCommentActivity extends BaseActivity implements
 	private TextView txt_price;
 	private TextView btn_send;
 	private EditText edit_content;
+	private TextView txt_time;
 
 	private KyListView mListView;
 	private HorizontalListView avatar_listView;
@@ -75,13 +79,23 @@ public class TaskCommentActivity extends BaseActivity implements
 		edit_content = (EditText) findViewById(R.id.edit_content);
 		mListView = (KyListView) findViewById(R.id.mlistview);
 		avatar_listView = (HorizontalListView) findViewById(R.id.avatar_listView);
+		txt_time = (TextView) findViewById(R.id.txt_time);
 		btn_send.setOnClickListener(this);
-		if (Integer.valueOf(KygroupApplication.getmApplication().mUser
-				.getRSid()) == task.getSid()) {
+		if (KygroupApplication.getmApplication().mUser.getEmail().equals(
+				task.getUser_id())) {
 			avatar_listView.setVisibility(View.GONE);
 		} else {
 			mListView.setVisibility(View.GONE);
 		}
+		avatar.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				startWaitingDialog();
+				User user = new User();
+				user.setEmail(task.getUser_id());
+				getUserInfo(user);
+			}
+		});
 	}
 
 	private void setValue() {
@@ -106,6 +120,7 @@ public class TaskCommentActivity extends BaseActivity implements
 		}
 		txt_title.setText("( " + category + " ) " + task.getTask_title());
 		txt_price.setText("报酬:" + task.getTask_price());
+		txt_time.setText(task.getTask_time());
 		adapter = new TaskCommentAdapter(this, lists);
 		mListView.setAdapter(adapter);
 		avatar_adapter = new CommentAvatarAdapter(this, lists);
@@ -177,5 +192,24 @@ public class TaskCommentActivity extends BaseActivity implements
 			}
 		});
 		task.executeParallel(comment);
+	}
+
+	private void getUserInfo(final User user) {
+		GetUserInfoTask task = new GetUserInfoTask();
+		task.setmCallBack(new AbstractTaskPostCallBack<Integer>() {
+			@Override
+			public void taskFinish(Integer result) {
+				closeWaitingDialog();
+				if (result != 200) {
+					ToastUtils.showShortToast("信息获取失败");
+					return;
+				}
+				Intent intent = new Intent(TaskCommentActivity.this,
+						PersonDetailActivity.class);
+				intent.putExtra("user", user);
+				startActivityForResult(intent, 100);
+			}
+		});
+		task.executeParallel(user);
 	}
 }

@@ -24,7 +24,6 @@ import com.edu.kygroup.ui.DizcuzWebViewActivity;
 import com.edu.kygroup.utils.TagUtils;
 import com.edu.kygroup.utils.ToastUtils;
 import com.edu.kygroup.utils.UrlUtils;
-import com.edu.kygroup.utils.Util;
 
 public class ZhaoShengKaoShiFragment extends Fragment implements
 		OnItemClickListener, IBindData {

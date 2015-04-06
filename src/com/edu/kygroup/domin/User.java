@@ -1,13 +1,19 @@
 package com.edu.kygroup.domin;
 
 import java.io.Serializable;
+import java.net.URLEncoder;
 import java.util.List;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.edu.kygroup.db.Const;
+import com.edu.kygroup.net.HttpAgent;
+import com.edu.kygroup.utils.UrlUtils;
 
 public class User implements Serializable {
 	/**
@@ -429,5 +435,60 @@ public class User implements Serializable {
 			this.mPic = avatar;
 		}
 		cursor.close();
+	}
+
+	public int getInfo() {
+		int res = -1;
+		StringBuffer buf = new StringBuffer(UrlUtils.GET_USER_INFO);
+		buf.append("user_id=" + mEmail);
+		String url = buf.toString();
+		String result = HttpAgent.httpPost(url);
+		try {
+			JSONObject obj = new JSONObject(result);
+			res = obj.getInt("result");
+			if (res == 200) {
+				JSONObject json_user = new JSONObject(
+						obj.getString("user_info"));
+				this.mNickName = json_user.optString("nickname");
+				this.mRole = json_user.optInt("role", 0);
+				this.mGender = json_user.optString("gender");
+				this.mEmail = json_user.optString("email");
+				this.mPic = json_user.optString("image");
+				this.mEYear = json_user.optString("enterTime");
+				this.mRYear = json_user.optString("session");
+				this.mAnnounce = json_user.optString("declaration");
+				this.mProvince = json_user.optString("pname");
+				this.mProid = json_user.optString("pid");
+				this.mCity = json_user.optString("cname");
+				setChatid(json_user.optString("chatid"));
+				setCityid(json_user.optString("city"));
+				setHowGoing(json_user.optString("howgoing"));
+				setRelation(json_user.optInt("relation"));
+				setState(json_user.optString("status"));
+				setConfirm(json_user.optInt("confirm"));
+				setAddress(json_user.optString("location"));
+				JSONObject aimObj = json_user.optJSONObject("aim");
+				if (null != aimObj) {
+					setRSchool(aimObj.optString("sname"));
+					setRSid(aimObj.optString("sid"));
+					setRCollege(aimObj.optString("cename"));
+					setRCid(aimObj.optString("ceid"));
+					setRMajor(aimObj.optString("mname"));
+					setRMid(aimObj.optString("mid"));
+				}
+				JSONObject majObj = json_user.optJSONObject("major");
+				if (null != majObj) {
+					setESchool(majObj.optString("sname"));
+					setESchoolid(aimObj.optString("sid"));
+					setECollege(majObj.optString("cename"));
+					setEColleageid(majObj.optString("ceid"));
+					setEMajor(majObj.optString("mname"));
+					setEMajorid(majObj.optString("mid"));
+					setScore(json_user.optString("scores"));
+				}
+			}
+		} catch (JSONException e) {
+		}
+		return res;
 	}
 }

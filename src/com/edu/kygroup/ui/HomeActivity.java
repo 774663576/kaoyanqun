@@ -37,12 +37,15 @@ import com.easemob.chat.EMChatManager;
 import com.edu.kygroup.R;
 import com.edu.kygroup.adapter.FunctionAdapter;
 import com.edu.kygroup.domin.Announce;
+import com.edu.kygroup.domin.ChengJi;
 import com.edu.kygroup.domin.ConfirmInfo;
 import com.edu.kygroup.domin.Upgrade;
 import com.edu.kygroup.domin.User;
 import com.edu.kygroup.iface.IBindData;
 import com.edu.kygroup.net.NetworkTask;
 import com.edu.kygroup.service.KyGroupService;
+import com.edu.kygroup.task.AbstractTaskPostCallBack;
+import com.edu.kygroup.task.GetChengJiTask;
 import com.edu.kygroup.utils.ActivityHolder;
 import com.edu.kygroup.utils.Constant;
 import com.edu.kygroup.utils.ConstantUtils;
@@ -120,13 +123,13 @@ public class HomeActivity extends BaseActivity implements OnClickListener,
 				.getInstance().getNewMessageBroadcastAction());
 		intentFilter.setPriority(3);
 		registerReceiver(msgReceiver, intentFilter);
+		getChengJI();
 	}
 
 	private void initImageOptions() {
 		if (null == mImageLoader) {
 			mImageLoader = ImageLoader.getInstance();
 		}
-
 		this.mOptions = new DisplayImageOptions.Builder()
 				.showStubImage(R.drawable.pic_boy)
 				.showImageForEmptyUri(R.drawable.pic_boy)
@@ -357,6 +360,7 @@ public class HomeActivity extends BaseActivity implements OnClickListener,
 		unregisterReceiver(receiver);
 		mBaokaoView.onDestory();
 		unregisterReceiver(msgReceiver);
+		mTaskView.onDestory();
 	}
 
 	// @Override
@@ -755,5 +759,22 @@ public class HomeActivity extends BaseActivity implements OnClickListener,
 		int unreadMsgCountTotal = 0;
 		unreadMsgCountTotal = EMChatManager.getInstance().getUnreadMsgsCount();
 		return unreadMsgCountTotal;
+	}
+
+	private ChengJi chengji = new ChengJi();
+
+	private void getChengJI() {
+		chengji.setUser_id(KygroupApplication.mUser.getEmail());
+		GetChengJiTask task = new GetChengJiTask();
+		task.setmCallBack(new AbstractTaskPostCallBack<Integer>() {
+			@Override
+			public void taskFinish(Integer result) {
+			}
+		});
+		task.executeParallel(chengji);
+	}
+
+	public ChengJi getChengji() {
+		return chengji;
 	}
 }

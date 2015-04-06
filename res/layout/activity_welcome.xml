@@ -15,20 +15,20 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
-        android:paddingBottom="30dip"
+        android:paddingBottom="50dip"
         android:visibility="invisible" >
 
         <Button
             android:id="@+id/btn_login"
             android:layout_width="wrap_content"
-            android:layout_height="48dip"
-            android:layout_marginLeft="50dip"
-            android:layout_marginRight="50dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="90dip"
+            android:layout_marginRight="90dip"
             android:layout_weight="1"
             android:background="@drawable/btn_bg"
             android:text="开启考研之旅"
-            android:textColor="#ff0000"
-            android:textSize="18sp" />
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
     </LinearLayout>
 
     <LinearLayout

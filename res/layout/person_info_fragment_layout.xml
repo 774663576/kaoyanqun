@@ -8,30 +8,28 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dip"
-        android:layout_marginRight="15dip"
-        android:gravity="center_vertical" >
+        android:layout_height="wrap_content" >
 
-        <TextView
+        <ImageView
+            android:id="@+id/img_renzheng"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="13dip"
-            android:paddingTop="13dip"
-            android:text="籍贯"
-            android:textColor="#394257"
-            android:textSize="16sp" />
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="12dip"
+            android:src="@drawable/un_certifiaction" />
 
         <TextView
-            android:id="@+id/txt_jiguan"
-            android:layout_width="0dip"
+            android:id="@+id/txt_renzheng"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dip"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:text="TextView"
+            android:layout_marginTop="10dip"
+            android:drawablePadding="8dip"
+            android:paddingBottom="5dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="15dip"
+            android:text="多浪费空间按当时"
             android:textColor="#999999"
-            android:textSize="16sp" />
+            android:textSize="13sp" />
     </LinearLayout>
 
     <View
@@ -49,11 +47,44 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="13dip"
-            android:paddingTop="13dip"
+            android:paddingBottom="8dip"
+            android:paddingTop="8dip"
+            android:text="籍贯"
+            android:textColor="#394257"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txt_jiguan"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="TextView"
+            android:textColor="#999999"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dip"
+        android:background="#e8eef3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dip"
+            android:paddingTop="8dip"
             android:text="院校"
             android:textColor="#394257"
-            android:textSize="16sp" />
+            android:textSize="13sp" />
 
         <TextView
             android:id="@+id/txt_yuanxiao"
@@ -63,19 +94,19 @@
             android:layout_weight="1"
             android:text="TextView"
             android:textColor="#999999"
-            android:textSize="16sp" />
+            android:textSize="13sp" />
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#e8eef3"
-        android:paddingBottom="15dip"
+        android:paddingBottom="8dip"
         android:paddingLeft="15dip"
-        android:paddingTop="15dip"
+        android:paddingTop="8dip"
         android:text="报考院校"
         android:textColor="#394257"
-        android:textSize="16sp" />
+        android:textSize="13sp" />
 
     <TextView
         android:id="@+id/txt_baokao"
@@ -84,12 +115,167 @@
         android:layout_marginLeft="15dip"
         android:drawablePadding="15dip"
         android:drawableRight="@drawable/arrow_right"
-        android:paddingBottom="15dip"
+        android:paddingBottom="8dip"
         android:paddingRight="10dip"
-        android:paddingTop="15dip"
+        android:paddingTop="8dip"
         android:text="TextView"
         android:textColor="#999999"
-        android:textSize="16sp" />
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/layout_chengji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e8eef3"
+            android:paddingBottom="8dip"
+            android:paddingLeft="15dip"
+            android:paddingTop="8dip"
+            android:text="考研成绩"
+            android:textColor="#394257"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/layout_object1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="95dip"
+            android:gravity="center_vertical|right"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/txt_object1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip"
+                android:text="科目1"
+                android:textColor="#394257"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txt_fenshu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:text="分数"
+                android:textColor="#999999"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dip"
+            android:background="#e8eef3" />
+
+        <LinearLayout
+            android:id="@+id/layout_object2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="95dip"
+            android:gravity="center_vertical|right"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/txt_object2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip"
+                android:text="科目1"
+                android:textColor="#394257"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txt_fenshu2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:text="分数"
+                android:textColor="#999999"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dip"
+            android:background="#e8eef3" />
+
+        <LinearLayout
+            android:id="@+id/layout_object3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="95dip"
+            android:gravity="center_vertical|right"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/txt_object3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip"
+                android:text="科目1"
+                android:textColor="#394257"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txt_fenshu3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:text="分数"
+                android:textColor="#999999"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dip"
+            android:background="#e8eef3" />
+
+        <LinearLayout
+            android:id="@+id/layout_object4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="95dip"
+            android:gravity="center_vertical|right"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/txt_object4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip"
+                android:text="科目1"
+                android:textColor="#394257"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txt_fenshu4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:text="分数"
+                android:textColor="#999999"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dip"
+            android:background="#e8eef3" />
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -99,12 +285,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="15dip"
+            android:paddingBottom="8dip"
             android:paddingLeft="15dip"
-            android:paddingTop="15dip"
+            android:paddingTop="8dip"
             android:text="关注院校"
             android:textColor="#394257"
-            android:textSize="16sp" />
+            android:textSize="13sp" />
 
         <ImageView
             android:id="@+id/img_arrow"
@@ -124,11 +310,11 @@
         android:layout_marginLeft="15dip"
         android:drawablePadding="15dip"
         android:drawableRight="@drawable/arrow_right"
-        android:paddingBottom="15dip"
+        android:paddingBottom="8dip"
         android:paddingRight="10dip"
-        android:paddingTop="15dip"
+        android:paddingTop="8dip"
         android:textColor="#999999"
-        android:textSize="16sp" />
+        android:textSize="13sp" />
 
     <!-- <RelativeLayout -->
     <!-- android:layout_width="match_parent" -->
@@ -167,10 +353,11 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height=" 13dip"
+        android:layout_height=" 8dip"
         android:background="#e8eef3" />
 
     <LinearLayout
+        android:id="@+id/layout_beibao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dip"
@@ -180,11 +367,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="13dip"
-            android:paddingTop="13dip"
+            android:paddingBottom="8dip"
+            android:paddingTop="8dip"
             android:text="备考"
             android:textColor="#394257"
-            android:textSize="16sp" />
+            android:textSize="13sp" />
 
         <TextView
             android:id="@+id/txt_beikao"
@@ -194,7 +381,7 @@
             android:layout_weight="1"
             android:text="应届生"
             android:textColor="#999999"
-            android:textSize="16sp" />
+            android:textSize="13sp" />
     </LinearLayout>
 
     <View
@@ -203,6 +390,7 @@
         android:background="#e8eef3" />
 
     <LinearLayout
+        android:id="@+id/layout_zhankuang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dip"
@@ -212,11 +400,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="13dip"
-            android:paddingTop="13dip"
+            android:paddingBottom="8dip"
+            android:paddingTop="8dip"
             android:text="战况"
             android:textColor="#394257"
-            android:textSize="16sp" />
+            android:textSize="13sp" />
 
         <TextView
             android:id="@+id/txt_zhankuang"
@@ -226,7 +414,7 @@
             android:layout_weight="1"
             android:text="备考"
             android:textColor="#999999"
-            android:textSize="16sp" />
+            android:textSize="13sp" />
     </LinearLayout>
 
 </LinearLayout>

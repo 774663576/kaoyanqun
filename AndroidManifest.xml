@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.edu.kygroup"
     android:installLocation="auto"
-    android:versionCode="6"
-    android:versionName="1.0.6" >
+    android:versionCode="7"
+    android:versionName="1.1.0" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -77,7 +77,7 @@
                 <action android:name="com.baidu.location.service_v2.4" >
                 </action>
             </intent-filter>
-        </service 
+        </service 
         -->
 
         <activity android:name="com.edu.kygroup.ui.BaseActivity" >
@@ -365,7 +365,7 @@
             <!--
             	AuthorizeAdapter表示一个继承自cn.sharesdk.framework.authorize.AuthorizeAdapter
             	的类，这个类可以监听到页面的生命周期，也可以获取授权页面的各种UI控件。 
-            	开发者可以通过继承AuthorizeAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            	开发者可以通过继承AuthorizeAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
             -->
             <meta-data
                 android:name="AuthorizeAdapter"
@@ -374,14 +374,14 @@
             <!--
             	QZoneWebShareAdapter表示一个继承自cn.sharesdk.tencent.qzone.QZoneWebShareAdapter
             	的类，这个类可以监听到页面的生命周期，也可以获QQ空间网页分享权页面的各种UI控件。 
-            	开发者可以通过继承QZoneWebShareAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            	开发者可以通过继承QZoneWebShareAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
             -->
             <meta-data
                 android:name="QZoneWebShareAdapter"
                 android:value="cn.sharesdk.demo.MyQZoneWebShareAdapter" />
             <!--
             	Dropbox的SSO功能需要在此处添加一个对ACTION_VIEW事件的过滤器，其中的scheme是
-            	“db-”前缀再开发者应用的加上appKey。如果此过滤器不设置，则不能完成SSO功能授权
+            	“db-”前缀再开发者应用的加上appKey。如果此过滤器不设置，则不能完成SSO功能授权
             -->
             <intent-filter>
                 <data android:scheme="db-7janx53ilz11gbs" />
@@ -395,7 +395,7 @@
             <!--
             	如果集成QQ分享，或者使用QQ客户端来进行QQ空间的分享，须要在此处添加一个对ACTION_VIEW
             	事件的过滤器，其中的scheme是“tencent”前缀再开发者应用的加上appId。如果此过滤器不设置，
-            	则分享结束以后不能得到正确的回调
+            	则分享结束以后不能得到正确的回调
             -->
             <intent-filter>
                 <data android:scheme="tencent100371282" />
@@ -447,23 +447,50 @@
         </activity>
         <activity
             android:name="com.edu.kygroup.ui.TaskActivity"
-            android:label="@string/title_activity_task" >
+            android:label="@string/title_activity_task"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.edu.kygroup.ui.PublishTaskActivity"
-            android:label="@string/title_activity_publish_task" >
+            android:label="@string/title_activity_publish_task"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.edu.kygroup.ui.MyFriendsActivity"
-            android:label="@string/title_activity_my_friends" >
+            android:label="@string/title_activity_my_friends"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.edu.kygroup.ui.TiaojiYuanxiao1Activity"
-            android:label="@string/title_activity_tiaoji_yuanxiao1" >
+            android:label="@string/title_activity_tiaoji_yuanxiao1"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.edu.kygroup.ui.TaskCommentActivity"
-            android:label="@string/title_activity_task_comment" >
+            android:label="@string/title_activity_task_comment"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.edu.kygroup.ui.GroupUserActivity"
+            android:label="@string/title_activity_group_user"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.edu.kygroup.ui.TopicCommentActivity"
+            android:label="@string/title_activity_topic_comment"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.edu.kygroup.ui.PersonDetailActivity1"
+            android:label="@string/title_activity_person_detail_activity1" >
+        </activity>
+        <activity
+            android:name="com.edu.kygroup.ui.MyTaskActivity"
+            android:label="@string/title_activity_my_task" >
+        </activity>
+        <activity
+            android:name="com.edu.kygroup.ui.KaoYanChengJiActivity"
+            android:label="@string/title_activity_kao_yan_cheng_ji" >
         </activity>
     </application>
 

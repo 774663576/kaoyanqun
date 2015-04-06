@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.edu.pullrefresh.PullToRefreshListView
+        android:id="@+id/search_result_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/bg_color"
+        android:dividerHeight="@dimen/width_line"
+        android:gravity="center"
+        android:listSelector="#00000000"
+        android:scrollbars="none" >
+    </com.edu.pullrefresh.PullToRefreshListView>
+
+    <LinearLayout
+        android:id="@+id/search_loadmore_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="false"
+        android:visibility="gone" >
+
+        <include layout="@layout/common_loadmore_layout" />
+    </LinearLayout>
+
+</RelativeLayout>

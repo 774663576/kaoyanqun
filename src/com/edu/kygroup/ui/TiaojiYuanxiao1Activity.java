@@ -9,7 +9,6 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
-
 import cn.sharesdk.framework.Platform;
 import cn.sharesdk.framework.ShareSDK;
 import cn.sharesdk.tencent.qq.QQ;
@@ -19,8 +18,8 @@ import cn.sharesdk.wechat.friends.Wechat;
 import cn.sharesdk.wechat.moments.WechatMoments;
 
 import com.edu.kygroup.R;
-import com.edu.kygroup.popupwindow.SelectPicPopwindow1;
-import com.edu.kygroup.popupwindow.SelectPicPopwindow1.SelectMenuOnclick;
+import com.edu.kygroup.popupwindow.SharePopwindow;
+import com.edu.kygroup.popupwindow.SharePopwindow.SelectMenuOnclick;
 
 public class TiaojiYuanxiao1Activity extends FragmentActivity implements
 		OnClickListener {
@@ -79,9 +78,8 @@ public class TiaojiYuanxiao1Activity extends FragmentActivity implements
 			@Override
 			public void onClick(View v) {
 
-				SelectPicPopwindow1 pop = new SelectPicPopwindow1(
-						TiaojiYuanxiao1Activity.this, v, new String[] { "QQ好友",
-								"QQ空间", "微信好友", "微信朋友圈" });
+				SharePopwindow pop = new SharePopwindow(
+						TiaojiYuanxiao1Activity.this, v);
 				pop.setmSelectOnclick(new SelectMenuOnclick() {
 
 					@Override
